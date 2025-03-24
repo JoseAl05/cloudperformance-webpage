@@ -3,7 +3,6 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { BarChart2, Box, Cloud, Home, PieChart, Zap, Computer, Database,DollarSign,TrendingDown,Repeat } from 'lucide-react';
-import { ModeToggle } from './TogglerMode';
 import { LogoComponent } from './LogoComponent';
 import {
     Accordion,
