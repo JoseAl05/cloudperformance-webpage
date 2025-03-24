@@ -8,7 +8,7 @@ const monsterrat = Montserrat({ weight: '600', subsets: ['latin'] });
 
 export const LogoComponent = () => {
     return (
-        <Link href='/dashboard' className='flex items-center pl-3 mb-0 md:mb-14'>
+        <Link href='/' className='flex items-center pl-3 mb-0 md:mb-14'>
             <div className='relative w-20 h-20 mr-2 mt-3'>
                 <Image
                     width={100}
