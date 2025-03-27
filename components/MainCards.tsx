@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 export const MainCards = () => {
     return (
         <>
-            <Card className='relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800'>
+            <Card className='relative overflow-hidden w-full mx-auto border-0 shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 hover:shadow-xl md:mx-auto lg:w-full lg:mx-auto'>
                 <CardHeader className='pb-2 pt-6'>
                     <div className='flex items-center justify-between'>
                         <h3 className='text-lg font-semibold text-red-500 md:text-nowrap dark:text-red-400'>Ahorro Potencial</h3>
@@ -27,7 +27,7 @@ export const MainCards = () => {
                 </CardContent>
                 <div className='h-2 bg-gradient-to-r from-red-400 to-red-500'></div>
             </Card>
-            <Card className='relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800'>
+            <Card className='relative overflow-hidden w-full mx-auto border-0 shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 hover:shadow-xl md:mx-auto lg:w-full lg:mx-auto'>
                 <CardHeader className='pb-2 pt-6'>
                     <div className='flex items-center justify-between'>
                         <h3 className='text-lg font-semibold text-blue-500 md:text-nowrap dark:text-blue-400'>Recursos Totales</h3>
@@ -49,7 +49,7 @@ export const MainCards = () => {
                 </CardContent>
                 <div className='h-2 bg-gradient-to-r from-blue-400 to-blue-500'></div>
             </Card>
-            <Card className='relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800'>
+            <Card className='relative overflow-hidden w-full mx-auto border-0 shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 hover:shadow-xl md:mx-auto lg:w-full lg:mx-auto'>
                 <CardHeader className='pb-2 pt-6'>
                     <div className='flex items-center justify-between'>
                         <h3 className='text-lg font-semibold text-blue-500 md:text-nowrap dark:text-blue-400'>Suscripciones</h3>
@@ -71,7 +71,7 @@ export const MainCards = () => {
                 </CardContent>
                 <div className='h-2 bg-gradient-to-r from-blue-400 to-blue-500'></div>
             </Card>
-            <Card className='overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 relative flex flex-col'>
+            <Card className='relative overflow-hidden w-full mx-auto border-0 shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 hover:shadow-xl md:mx-auto lg:w-full lg:mx-auto'>
                 <CardHeader className='pb-2 pt-6'>
                     <div className='flex items-center justify-between'>
                         <h3 className='text-lg font-semibold text-blue-500 md:text-nowrap dark:text-blue-400'>Cuentas de Facturación</h3>
