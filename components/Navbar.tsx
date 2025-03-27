@@ -36,7 +36,7 @@ export const Navbar = () => {
 
     if (!isMounted) return null
 
-    const handleNavLinkClick = (href) => {
+    const handleNavLinkClick = (href:string) => {
         setActiveHash(href);
         if (isOpen) {
             setIsOpen(false);
