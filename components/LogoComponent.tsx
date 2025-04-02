@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 const monsterrat = Montserrat({ weight: '600', subsets: ['latin'] });
 
-export const LogoComponent = ({ isExpanded }: { isExpanded: boolean }) => {
+export const LogoComponent = ({ isExpanded }: { isExpanded?: boolean }) => {
     return isExpanded ? (
         <Link href='/' className='flex items-center mb-0 md:pl-3 md:mb-14'>
             <div className='relative w-10 h-10 md:w-20 md:h-20 mr-2 mt-0 md:mt-3'>
