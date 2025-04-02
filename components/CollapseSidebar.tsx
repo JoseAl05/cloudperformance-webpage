@@ -99,7 +99,7 @@ export const CollapseSidebar = () => {
                       route.href === "#" && "justify-center",
                     )}
                   >
-                    <div className={cn("flex items-center justify-center w-10 h-10", route.className)}>
+                    <div className={cn("flex items-center justify-center w-10 h-10", )}>
                       <route.icon className="h-6 w-6" />
                     </div>
                     {route.href !== "#" && <span className="ml-3 font-medium">{route.label}</span>}
@@ -112,7 +112,6 @@ export const CollapseSidebar = () => {
                         className={cn(
                           "flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors",
                           pathname === route.href && "text-white",
-                          route.className,
                         )}
                       >
                         <route.icon className="h-6 w-6" />
