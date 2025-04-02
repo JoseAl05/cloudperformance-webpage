@@ -1,7 +1,5 @@
 'use client'
 
-import { MainViewFilters } from './MainViewFilters'
-
 export const MainViewConsume = () => {
     return (
         <>
