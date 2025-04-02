@@ -1,33 +1,34 @@
-'use client'
-import Image from 'next/image';
-import Link from 'next/link';
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { Montserrat } from "next/font/google"
+import { cn } from "@/lib/utils"
+import { useTheme } from "next-themes"
 
-import { Montserrat } from 'next/font/google';
-import { cn } from '@/lib/utils';
-
-const monsterrat = Montserrat({ weight: '600', subsets: ['latin'] });
+const montserrat = Montserrat({ weight: "600", subsets: ["latin"] })
 
 export const LogoComponent = ({ isExpanded }: { isExpanded?: boolean }) => {
-    return isExpanded ? (
-        <Link href='/' className='flex items-center mb-0 md:pl-3 md:mb-14'>
-            <div className='relative w-10 h-10 md:w-20 md:h-20 mr-2 mt-0 md:mt-3'>
-                <Image
-                    width={100}
-                    height={100}
-                    alt='Logo Intac'
-                    src='/logo.png'
-                />
-            </div>
-            <h1 className={cn('text-base md:text-xl font-bold text-blue-600', monsterrat.className)}>Cloud Performance</h1>
-        </Link>
-    ) : (
-        <div className='relative w-10 h-10 md:w-12 md:h-12 mr-2 mt-0 md:mt-3'>
-            <Image
-                width={100}
-                height={100}
-                alt='Logo Intac'
-                src='/logo.png'
-            />
-        </div>
-    );
+  const { theme } = useTheme()
+
+  return isExpanded ? (
+    <Link href="/" className="flex items-center gap-3">
+      <div className="relative w-8 h-8 flex-shrink-0">
+        <Image width={100} height={100} alt="Logo Cloud Performance" src="/logo.png" className="object-contain" />
+      </div>
+      <h1
+        className={cn(
+          "text-base font-bold truncate transition-all",
+          montserrat.className,
+          theme === "dark" ? "text-white" : "text-blue-600",
+        )}
+      >
+        Cloud Performance
+      </h1>
+    </Link>
+  ) : (
+    <div className="relative w-8 h-8 flex-shrink-0">
+      <Image width={100} height={100} alt="Logo Cloud Performance" src="/logo.png" className="object-contain" />
+    </div>
+  )
 }
+

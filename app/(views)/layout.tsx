@@ -6,9 +6,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <div className="h-full relative">
             <CollapseSidebar />
-            <main className="w-full pl-16">
+            <main className="w-full pl-16 transition-all duration-300">
                 <Navbar />
-                <Separator className="bg-slate-400" />
+                <Separator className="bg-slate-200 dark:bg-slate-800" />
                 {children}
             </main>
         </div>
