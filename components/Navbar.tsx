@@ -46,7 +46,6 @@ export const Navbar = () => {
 
     const navLinks = [
         { name: 'Treemap', href: '#treemap' },
-        { name: 'Consumo/No Consumo', href: '#consumo' },
         { name: 'Recursos por agrupación', href: '#recursos' },
         { name: 'Tabla de Items', href: '#items' }
     ]

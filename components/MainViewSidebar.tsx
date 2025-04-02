@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { BarChart2, Box, Cloud, Home, PieChart, Zap, Computer, Database,DollarSign,TrendingDown,Repeat } from 'lucide-react';
+import { BarChart2, Box, Cloud, Home, PieChart, Zap, Computer, Database,DollarSign,TrendingDown,Repeat, ChartLine } from 'lucide-react';
 import { LogoComponent } from './LogoComponent';
 import {
     Accordion,
@@ -23,6 +23,12 @@ const routes = [
         icon: Home,
         href: '/main-view',
         color: 'text-sky-500',
+    },
+    {
+        label: 'Consumo',
+        icon: ChartLine,
+        href: '/consumo',
+        color: 'text-green-700',
     },
     {
         label: 'Quotas',

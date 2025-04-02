@@ -1,5 +1,4 @@
 import { QuotasViews } from '@/components/SidebarViewQuotas';
-import { Separator } from '@/components/ui/separator';
 import { Calendar } from 'lucide-react';
 
 export default function DeploymentsPage() {
@@ -15,7 +14,6 @@ export default function DeploymentsPage() {
                         </div>
                     </div>
                 </div>
-                <Separator className='bg-slate-800 dark:bg-slate-300'/>
                 <h3 className='text-slate-800 text-3xl font-medium dark:text-white'>Deployments</h3>
                 <QuotasViews />
             </div>
