@@ -146,7 +146,7 @@ export const CollapseSidebar = () => {
                         <span className="ml-3 text-sm">{route.label}</span>
                       </Link>
                     ) : (
-                      <Tooltip>
+                      <Tooltip open={isExpanded}>
                         <TooltipTrigger asChild>
                           <Link
                             href={route.href}
