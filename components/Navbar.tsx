@@ -52,7 +52,7 @@ export const Navbar = () => {
 
     return (
         <div className='fixed z-50 w-full bg-white shadow-md dark:bg-slate-900'>
-            <nav className='hidden justify-between items-center max-w-[1600px] md:flex md:flex-col md:mr-72 lg:flex-row lg:mr-80 lg:pl-12'>
+            <nav className='hidden justify-between items-center max-w-[1600px] md:flex md:flex-col md:mr-48 lg:flex-row lg:pl-12'>
                 <div className='h-24 flex justify-center items-center gap-2 lg:gap-4'>
                     {navLinks.map((link) => (
                         typeof window &&
