@@ -15,6 +15,8 @@ export default function MainPage() {
                 <Separator className='bg-slate-800 dark:bg-slate-300' />
                 <h3 id='treemap' className='text-slate-800 text-3xl font-medium dark:text-white'>Treemap</h3>
                 <MainViewTreemap />
+                <h3 id='treemap' className='text-slate-800 text-3xl font-medium dark:text-white'>Prueba</h3>
+                <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe>
             </div>
         </div>
     )
