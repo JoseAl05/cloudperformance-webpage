@@ -19,15 +19,15 @@ export const MainViewConsume = () => {
         switch(selectedValue){
             case 'maquinasvirtuales':
                 return(
-                    <iframe title="CloudPerformance_vista_principal_top_recursos" width="1280" height="720" src="https://app.powerbi.com/reportEmbed?reportId=62633047-8530-4dad-9c8b-6f6321d3fc08&pageName=2442ecae00a0949c9812&autoAuth=true&ctid=7bb3e147-d1e8-448c-94a4-52642dd5dd8d&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe>
+                    <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=97ff25681034e4ee2078" className='w-md md:w-xl lg:w-full' style={{clipPath:"inset(0px 0px 53px 0px)"}} frameBorder="0" allowFullScreen={true}></iframe>
                 );
             case 'basesdedatos':
                 return(
-                    <iframe title="CloudPerformance_vista_principal_heatmap" width="1280" height="720" src="https://app.powerbi.com/reportEmbed?reportId=62633047-8530-4dad-9c8b-6f6321d3fc08&pageName=25dbb1ab967556c0dcc6&autoAuth=true&ctid=7bb3e147-d1e8-448c-94a4-52642dd5dd8d&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe>
+                    <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=8b5e438e3e249625e92c" className='w-md md:w-xl lg:w-full' style={{clipPath:"inset(0px 0px 53px 0px)"}} frameBorder="0" allowFullScreen={true}></iframe>
                 );
             case 'nodos':
                 return(
-                    <iframe title="CloudPerformance_vista_recurso" width="1280" height="720" src="https://app.powerbi.com/reportEmbed?reportId=13ede75c-d0a1-4b2f-9e28-9469893e793f&autoAuth=true&ctid=7bb3e147-d1e8-448c-94a4-52642dd5dd8d&filterPaneEnabled=false&navContentPaneEnabled=false&pageView=FitToWidth&fullscreen=true" frameBorder="0" allowFullScreen={true}></iframe>
+                    <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fccf1ae01c449603b42c" className='w-md md:w-xl lg:w-full' style={{clipPath:"inset(0px 0px 53px 0px)"}} frameBorder="0" allowFullScreen={true}></iframe>
                 )
         }
     }

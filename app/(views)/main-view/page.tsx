@@ -1,3 +1,4 @@
+import { MainViewComponents } from '@/components/MainViewComponents';
 import { MainViewTreemap } from '@/components/MainViewTreemap';
 import { Separator } from '@/components/ui/separator';
 
@@ -9,14 +10,14 @@ export default function MainPage() {
             <div className='flex-1 flex flex-col gap-10 bg-gray-200 p-4 overflow-auto dark:bg-[#111827] md:px-16'>
                 <div className='flex items-center justify-end gap-2 px-10 text-black dark:text-white'>
                 </div>
-                <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
-                    <iframe title="CloudPerformance_totales_encabezado" width="1280" height="200" src="https://app.powerbi.com/reportEmbed?reportId=de06f0ab-e784-429b-91cb-dcbc87a7bce8&autoAuth=true&ctid=7bb3e147-d1e8-448c-94a4-52642dd5dd8d&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe>
-                </div>
+                <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=5236695e7626c351aa10" className='w-md md:w-xl lg:w-full' style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true}></iframe>
                 <Separator className='bg-slate-800 dark:bg-slate-300' />
-                <h3 id='treemap' className='text-slate-800 text-3xl font-medium dark:text-white'>Treemap</h3>
+                <MainViewComponents />
+                <Separator className='bg-slate-800 dark:bg-slate-300' />
                 <MainViewTreemap />
+                {/* <MainViewTreemap />
                 <h3 id='treemap' className='text-slate-800 text-3xl font-medium dark:text-white'>Prueba</h3>
-                <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe>
+                <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&filterPaneEnabled=false&navContentPaneEnabled=false" frameBorder="0" allowFullScreen={true}></iframe> */}
             </div>
         </div>
     )

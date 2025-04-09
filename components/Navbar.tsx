@@ -1,12 +1,12 @@
 'use client'
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { LogoComponent } from './LogoComponent';
 import { MobileSidebar } from './MainViewMobileSidebar';
 import { cn } from '@/lib/utils';
 import { BellIcon, Menu, Settings2, X } from 'lucide-react';
 import { ModeToggle } from './TogglerMode';
-import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 export const Navbar = () => {
@@ -29,26 +29,46 @@ export const Navbar = () => {
         return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
-
     const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
+        setIsOpen(!isOpen);
+    };
 
-    if (!isMounted) return null
+    if (!isMounted) return null;
 
-    const handleNavLinkClick = (href:string) => {
+    const handleNavLinkClick = (href: string) => {
         setActiveHash(href);
         if (isOpen) {
             setIsOpen(false);
         }
     };
 
+    const navLinksMapping = {
+        '/main-view': [
+            { name: 'Heatmap', href: '#treemap' },
+            { name: 'Tendencia PayG', href: '#paygtrend' },
+            { name: 'Storage vs BlobStorage', href: '#storagevsblob' },
+            { name: 'Spot VM vs VM', href: '#spotvmvsvm' },
+            { name: 'VM no Utilizadas', href: '#vmunused' },
+            { name: 'VMSS no Utilizadas', href: '#vmssunused' },
+        ],
+        '/consumo': [
+            { name: 'Consumo', href: '#consumo' }
+        ],
+        '/deployments': [
+            { name: 'Deployments', href: '#deployments' }
+        ],
+        '/quotas': [
+            { name: 'Quotas', href: '#quotas' }
+        ],
+        '/recursos/maquinas-virtuales': [
+            { name: 'VMs', href: '#vms' }
+        ]
+    };
 
-    const navLinks = [
-        { name: 'Treemap', href: '#treemap' },
-        { name: 'Recursos por agrupación', href: '#recursos' },
-        { name: 'Tabla de Items', href: '#items' }
-    ]
+    const navLinks = navLinksMapping[pathname] || [
+        { name: 'Default Link 1', href: '#default1' },
+        { name: 'Default Link 2', href: '#default2' },
+    ];
 
     return (
         <div className='fixed z-50 w-full bg-white shadow-md dark:bg-slate-900'>
@@ -62,19 +82,20 @@ export const Navbar = () => {
                             onClick={() => handleNavLinkClick(link.href)}
                             className={cn(
                                 `
-                                    p-2
-                                    text-sm
-                                    rounded-md
-                                    whitespace-nowrap
-                                    lg:text-base
-                                    lg:p-3
-                                    hover:shadow-xl
-                                    hover:border-white
-                                    hover:bg-blue-600
-                                    hover:text-white
-                                    hover:scale-105
-                                    transition-all`,
-                                    activeHash === link.href
+                                p-2
+                                text-sm
+                                rounded-md
+                                whitespace-nowrap
+                                cursor-pointer
+                                lg:text-base
+                                lg:p-3
+                                hover:shadow-xl
+                                hover:border-white
+                                hover:bg-blue-600
+                                hover:text-white
+                                hover:scale-105
+                                transition-all`,
+                                activeHash === link.href
                                     ? 'bg-blue-600 text-white font-medium'
                                     : 'bg-white text-black dark:bg-slate-900 dark:text-white font-normal',
                             )}
@@ -126,8 +147,7 @@ export const Navbar = () => {
                             href={link.href}
                             onClick={() => setIsOpen(false)}
                             className={cn(
-                                `
-                                block px-6 py-3
+                                `block px-6 py-3
                                 transition-all
                                 hover:bg-blue-50
                                 dark:hover:bg-slate-700`,
@@ -146,4 +166,4 @@ export const Navbar = () => {
             )}
         </div>
     );
-}
+};
