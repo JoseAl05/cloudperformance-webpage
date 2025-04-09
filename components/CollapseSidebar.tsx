@@ -298,7 +298,7 @@ export const CollapseSidebar = () => {
                         </div>
                       ) : (
                         <Link
-                          href={route.href}
+                          href={route.href ? route.href : '#'}
                           className={cn(
                             'flex items-center px-3 py-2.5 rounded-xl w-full transition-all duration-200',
                             pathname === route.href
@@ -339,7 +339,7 @@ export const CollapseSidebar = () => {
                             </div>
                           ) : (
                             <Link
-                              href={route.href}
+                              href={route.href ? route.href : '#'}
                               className={cn(
                                 'flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200',
                                 pathname === route.href
