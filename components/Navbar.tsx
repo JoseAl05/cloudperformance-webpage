@@ -9,6 +9,11 @@ import { BellIcon, Menu, Settings2, X } from 'lucide-react';
 import { ModeToggle } from './TogglerMode';
 import { Button } from '@/components/ui/button';
 
+interface NavLink {
+    name: string;
+    href: string;
+  }
+
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
@@ -42,7 +47,7 @@ export const Navbar = () => {
         }
     };
 
-    const navLinksMapping = {
+    const navLinksMapping: Record<string, NavLink[]> = {
         '/main-view': [
             { name: 'Heatmap', href: '#treemap' },
             { name: 'Tendencia PayG', href: '#paygtrend' },
@@ -65,7 +70,7 @@ export const Navbar = () => {
         ]
     };
 
-    const navLinks = navLinksMapping[pathname] || [
+    const navLinks:NavLink[] = navLinksMapping[pathname] || [
         { name: 'Default Link 1', href: '#default1' },
         { name: 'Default Link 2', href: '#default2' },
     ];
