@@ -33,7 +33,7 @@ export const MainViewConsume = () => {
     }
     return (
         <>
-            <div className='mx-0 rounded-md'>
+            <div className='w-full mx-0 rounded-md'>
                 <Select onValueChange={handleCategoryChange}>
                     <SelectTrigger className="w-full flex justify-center text-4xl font-bold my-5">
                         <SelectValue placeholder="Seleccione una categoría..." />
