@@ -50,11 +50,7 @@ export const Navbar = () => {
     const navLinksMapping: Record<string, NavLink[]> = {
         '/main-view': [
             { name: 'Heatmap', href: '#treemap' },
-            { name: 'Tendencia PayG', href: '#paygtrend' },
-            { name: 'Storage vs BlobStorage', href: '#storagevsblob' },
-            { name: 'Spot VM vs VM', href: '#spotvmvsvm' },
-            { name: 'VM no Utilizadas', href: '#vmunused' },
-            { name: 'VMSS no Utilizadas', href: '#vmssunused' },
+            { name: 'Tendencia PayG', href: '#paygtrend' }
         ],
         '/consumo': [
             { name: 'Consumo', href: '#consumo' }

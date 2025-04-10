@@ -1,9 +1,9 @@
 'use client'
 
-import { Computer, Info } from 'lucide-react'
+import { ArrowDownWideNarrow, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const MainViewVmssUnusedWithResources = () => {
+export const MainViewTopResources = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -14,6 +14,7 @@ export const MainViewVmssUnusedWithResources = () => {
 
         return () => clearTimeout(timer)
     }, [])
+
     return (
         <div className='w-full max-w-full sm:max-w-[95vw] mx-auto px-2 py-3 sm:py-6'>
             <div className='bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden'>
@@ -21,10 +22,10 @@ export const MainViewVmssUnusedWithResources = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <Computer className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <ArrowDownWideNarrow className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Máquinas virtuales no utilizadas con recursos asignados
+                                Top Recursos por Categoría
                             </h2>
                         </div>
                         <button
@@ -35,14 +36,16 @@ export const MainViewVmssUnusedWithResources = () => {
                             <Info className='h-4 w-4 sm:h-5 sm:w-5 text-slate-600' />
                         </button>
                     </div>
+
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra las máquinas virtuales que tienen una utilización de sus componentes (CPU y Memoria) bajo un 10%. Adicionalmente se pueden ver Discos, Interfaces, IPs asignadas a las máquinas seleccionadas.
+                                Esta visualización muestra la cantidad de recursos o los dolares facturados agrupados por distintas categorías.
                             </p>
                         </div>
                     )}
                 </div>
+
                 <div className='p-2 sm:p-4'>
                     {isLoading ? (
                         <div className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh] flex items-center justify-center bg-slate-50 rounded-lg border border-slate-200 animate-pulse'>
@@ -55,20 +58,30 @@ export const MainViewVmssUnusedWithResources = () => {
                         </div>
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
-                            <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=dc88cc57ffec29c75ce2" className='w-md md:w-xl lg:w-full' style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true}></iframe>
+                            <iframe
+                                title='Cloudperformance2.0'
+                                width='1280'
+                                height='720'
+                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=89d7069a057406d0cd64'
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
                         </div>
                     )}
                 </div>
             </div>
+
             <style jsx>{`
-                @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(-10px); }
-                to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fadeIn {
-                animation: fadeIn 0.3s ease-out forwards;
-                }
-            `}</style>
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out forwards;
+        }
+      `}</style>
         </div>
     )
 }
