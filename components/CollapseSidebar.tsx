@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
-  BarChart2,
   Box,
   Cloud,
   Home,
@@ -16,11 +15,6 @@ import {
   LineChart,
   ChevronRight,
   ChevronDown,
-  Computer,
-  Database,
-  DollarSign,
-  TrendingDown,
-  Repeat,
   Server,
   HardDrive,
   Grid2X2,
@@ -93,10 +87,10 @@ export const CollapseSidebar = () => {
       color: 'text-sky-500',
     },
     {
-      label: 'Heatmap Costos y Tendencia PayG',
+      label: 'Heatmap y Tendencia Pago por Uso',
       icon: Grid2X2,
       href: '/ahorro',
-      tooltip: 'Vista Heatmap y Tendencia PayG',
+      tooltip: 'Heatmap y Tendencia Pago por Uso',
       color: 'text-teal-500',
     },
     {
@@ -152,52 +146,7 @@ export const CollapseSidebar = () => {
           color: 'text-orange-700',
         },
       ],
-    },
-    {
-      label: 'Funciones',
-      icon: BarChart2,
-      isDropdown: true,
-      tooltip: 'Funciones',
-      color: 'text-emerald-500',
-      subItems: [
-        {
-          label: 'Consumo VMs',
-          icon: Computer,
-          href: '/functions/consumo-vms',
-          color: 'text-blue-500',
-        },
-        {
-          label: 'Blob Storage',
-          icon: Database,
-          href: '/functions/blobstorage',
-          color: 'text-teal-500',
-        },
-        {
-          label: 'Spot VMs',
-          icon: Computer,
-          href: '/functions/spot-vms',
-          color: 'text-violet-500',
-        },
-        {
-          label: 'Facturación de Recursos',
-          icon: DollarSign,
-          href: '/functions/facturacion-recursos',
-          color: 'text-green-500',
-        },
-        {
-          label: 'Recursos no utilizados',
-          icon: TrendingDown,
-          href: '/functions/recursos-no-utilizados',
-          color: 'text-red-500',
-        },
-        {
-          label: 'VMSS Autoscalling',
-          icon: Repeat,
-          href: '/functions/autoscaling-vmss',
-          color: 'text-indigo-500',
-        },
-      ],
-    },
+    }
   ]
 
   if (!isMounted) return null

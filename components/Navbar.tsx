@@ -8,17 +8,23 @@ import { cn } from '@/lib/utils';
 import { BellIcon, Menu, Settings2, X } from 'lucide-react';
 import { ModeToggle } from './TogglerMode';
 import { Button } from '@/components/ui/button';
+import { Montserrat } from "next/font/google";
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 interface NavLink {
     name: string;
     href: string;
-  }
+}
+
+const montserrat = Montserrat({ weight: "600", subsets: ["latin"] })
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const [activeHash, setActiveHash] = useState('');
     const pathname = usePathname();
+    const { theme } = useTheme()
 
     useEffect(() => {
         setIsMounted(true);
@@ -66,16 +72,30 @@ export const Navbar = () => {
         ]
     };
 
-    const navLinks:NavLink[] = navLinksMapping[pathname] || [
+    const navLinks: NavLink[] = navLinksMapping[pathname] || [
         { name: 'Default Link 1', href: '#default1' },
         { name: 'Default Link 2', href: '#default2' },
     ];
 
     return (
         <div className='fixed z-50 w-full bg-white shadow-md dark:bg-slate-900'>
-            <nav className='hidden justify-between items-center max-w-[1600px] md:flex md:flex-col md:mr-48 lg:flex-row lg:pl-12'>
+            <nav className='hidden justify-between items-center max-w-[1600px] md:flex md:flex-col md:mr-24 lg:flex-row lg:pl-12'>
                 <div className='h-24 flex justify-center items-center gap-2 lg:gap-4'>
-                    {navLinks.map((link) => (
+                    <Link href="/" className="flex items-center gap-3">
+                        <div className="relative w-20 h-20 flex-shrink-0">
+                            <Image width={100} height={100} alt="Logo Cloud Performance" src="/logo.png" className="object-contain" />
+                        </div>
+                        <h1
+                            className={cn(
+                                "text-base font-bold truncate transition-all",
+                                montserrat.className,
+                                theme === "dark" ? "text-white" : "text-blue-600",
+                            )}
+                        >
+                            Cloud Performance
+                        </h1>
+                    </Link>
+                    {/* {navLinks.map((link) => (
                         typeof window &&
                         <Link
                             key={link.name}
@@ -103,7 +123,7 @@ export const Navbar = () => {
                         >
                             {link.name}
                         </Link>
-                    ))}
+                    ))} */}
                 </div>
                 <div className='flex gap-3 z-50 justify-center items-center lg:gap-5'>
                     <div className='text-slate-400 cursor-pointer rounded-md p-1 hover:bg-blue-600 hover:text-white transition-all'>

@@ -24,7 +24,7 @@ export const MainViewVmssUnusedWithResources = () => {
                                 <Computer className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Máquinas virtuales no utilizadas con recursos asignados
+                                Virtual Machine Scale Sets no utilizadas con recursos asignados
                             </h2>
                         </div>
                         <button
