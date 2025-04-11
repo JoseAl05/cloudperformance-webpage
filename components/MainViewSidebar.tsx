@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { BarChart2, Box, Cloud, Home, PieChart, Zap, Computer, Database,DollarSign,TrendingDown,Repeat, ChartLine } from 'lucide-react';
+import { BarChart2, Box, Cloud, Home, PieChart, Zap, Computer, Database,DollarSign,TrendingDown,Repeat, ChartLine, Grid2X2 } from 'lucide-react';
 import { LogoComponent } from './LogoComponent';
 import {
     Accordion,
@@ -23,6 +23,12 @@ const routes = [
         icon: Home,
         href: '/main-view',
         color: 'text-sky-500',
+    },
+    {
+        label: 'Heatmap Costos y Tendencia PayG',
+        icon: Grid2X2,
+        href: '/ahorro',
+        color: 'text-teal-500',
     },
     {
         label: 'Consumo',

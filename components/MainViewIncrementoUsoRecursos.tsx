@@ -1,10 +1,7 @@
-'use client'
-
-import { Grid2X2, Info } from 'lucide-react'
+import { ChartBar, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { Separator } from '@/components/ui/separator'
 
-export const MainViewTreemap = () => {
+export const MainViewIncrementoUsoRecursos = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -23,10 +20,10 @@ export const MainViewTreemap = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <Grid2X2 className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <ChartBar className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Heatmap
+                                Comparación utilización de recursos por fecha
                             </h2>
                         </div>
                         <button
@@ -59,11 +56,17 @@ export const MainViewTreemap = () => {
                         </div>
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
-                            <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=f168ae4960ce7c382b5a" style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true} className='w-md md:w-xl lg:w-full'></iframe>
-                            <Separator className='bg-slate-600'/>
-                            <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=07da3c9ce4a04eb45d08" className='w-md md:w-xl lg:w-full' style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true}></iframe>
+                            <iframe
+                                title='Cloudperformance2.0'
+                                width='1280'
+                                height='720'
+                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=ab7bb1002b8bc1574ead  '
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
                         </div>
-
                     )}
                 </div>
             </div>
@@ -79,14 +82,4 @@ export const MainViewTreemap = () => {
         `}</style>
         </div>
     )
-    // return (
-    //     <>
-    //         <div className='flex flex-col items-center gap-5 w-full rounded-md'>
-    //             <h3 id='treemap' className='text-slate-800 text-3xl font-medium dark:text-white'>Heatmap Posibilidad de Ahorro</h3>
-
-    //             <h3 id='paygtrend' className='text-slate-800 text-3xl font-medium dark:text-white'>Tendencia Pago por Uso</h3>
-
-    //         </div>
-    //     </>
-    // )
 }

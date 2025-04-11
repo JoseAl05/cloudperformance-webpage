@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { ArrowDownWideNarrow, ChartColumnBig, Computer, Database } from 'lucide-react'
+import { ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 import { MainViewBlobStorage } from './MainViewBlobStorage'
@@ -10,6 +10,7 @@ import { MainViewVmUnusedWithResources } from './MainViewVmUnusedWithResources'
 import { MainViewVmssUnusedWithResources } from './MainViewVmssUnusedWithResources'
 import { MainViewTopResources } from './MainViewTopResources'
 import { MainViewTopResourcesByLocation } from './MainViewTopResourcesByLocation'
+import { MainViewIncrementoUsoRecursos } from './MainViewIncrementoUsoRecursos'
 
 export const MainViewComponents = () => {
   const [selectedValue, setSelectedValue] = useState('blobvsstorage')
@@ -37,6 +38,11 @@ export const MainViewComponents = () => {
       value: 'usagebylocation',
       label: 'Promedio de Uso por Localización',
       icon: <ChartColumnBig className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'comparitionresourceusage',
+      label: 'Comparación utilización de recursos por fecha',
+      icon: <ChartBar className='mr-2 h-5 w-5' />,
     }
   ]
 
@@ -64,7 +70,9 @@ export const MainViewComponents = () => {
       case 'topresources':
         return <MainViewTopResources />
       case 'usagebylocation':
-        return <MainViewTopResourcesByLocation/>
+        return <MainViewTopResourcesByLocation />
+      case 'comparitionresourceusage':
+        return <MainViewIncrementoUsoRecursos />
       default:
         return null
     }

@@ -23,6 +23,7 @@ import {
   Repeat,
   Server,
   HardDrive,
+  Grid2X2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -90,6 +91,13 @@ export const CollapseSidebar = () => {
       href: '/main-view',
       tooltip: 'Vista Principal',
       color: 'text-sky-500',
+    },
+    {
+      label: 'Heatmap Costos y Tendencia PayG',
+      icon: Grid2X2,
+      href: '/ahorro',
+      tooltip: 'Vista Heatmap y Tendencia PayG',
+      color: 'text-teal-500',
     },
     {
       label: 'Consumo',
