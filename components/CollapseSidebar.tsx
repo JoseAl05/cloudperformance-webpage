@@ -18,6 +18,7 @@ import {
   Server,
   HardDrive,
   Grid2X2,
+  Table2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -113,6 +114,13 @@ export const CollapseSidebar = () => {
       href: '/deployments',
       tooltip: 'Vista Deployments',
       color: 'text-pink-500',
+    },
+    {
+      label: 'Tablas de Items de Azure',
+      icon: Table2,
+      href: '/items-tables',
+      tooltip: 'Tablas de Items de Azure',
+      color: 'text-red-500',
     },
     {
       label: 'Recursos',
