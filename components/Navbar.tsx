@@ -27,16 +27,6 @@ export const Navbar = () => {
 
     useEffect(() => {
         setIsMounted(true);
-        if (typeof window !== 'undefined') {
-            setActiveHash(window.location.hash);
-        }
-
-        const handleHashChange = () => {
-            setActiveHash(window.location.hash);
-        };
-
-        window.addEventListener('hashchange', handleHashChange);
-        return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
     const toggleMenu = () => {
