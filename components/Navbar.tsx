@@ -22,7 +22,6 @@ const montserrat = Montserrat({ weight: "600", subsets: ["latin"] })
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const [activeHash, setActiveHash] = useState('');
     const pathname = usePathname();
     const { theme } = useTheme()
 
@@ -45,13 +44,6 @@ export const Navbar = () => {
     };
 
     if (!isMounted) return null;
-
-    const handleNavLinkClick = (href: string) => {
-        setActiveHash(href);
-        if (isOpen) {
-            setIsOpen(false);
-        }
-    };
 
     const navLinksMapping: Record<string, NavLink[]> = {
         '/main-view': [
