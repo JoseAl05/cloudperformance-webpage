@@ -111,7 +111,7 @@ export const MainViewTopByCategory = () => {
                                     ))}
                                 </SelectContent>
                             </Select>
-                            {renderIframe}
+                            {renderIframe()}
                         </div>
                     )}
                 </div>
