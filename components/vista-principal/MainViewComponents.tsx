@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { AlarmClock, ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database, TrendingUpDown } from 'lucide-react'
+import { AlarmClock, ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database, DollarSign, TrendingUpDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 import { MainViewBlobStorage } from './MainViewBlobStorage'
@@ -16,7 +16,8 @@ import { MainViewTopTenUsageNoUsageResources } from './MainViewTopTenUsageNoUsag
 import { MainViewUsageVmOpenClosedHours } from './MainViewUsageVmOpenClosedHours'
 
 export const MainViewComponents = () => {
-  const [selectedValue, setSelectedValue] = useState('blobvsstorage')
+  const [selectedValue, setSelectedValue] = useState('blobvsstorage');
+  const [selectedCategory, setSelectedCategory] = useState('resources');
   const [isLoading, setIsLoading] = useState(false)
 
   const categories = [
@@ -55,27 +56,36 @@ export const MainViewComponents = () => {
     {
       value: 'toptenusageresources',
       label: 'Top 10 Recursos más y menos utilizados',
-      icon: <TrendingUpDown className='mr-2 h-5 w-50'/>
+      icon: <TrendingUpDown className='mr-2 h-5 w-50' />
     },
     {
       value: 'vmusageopenclosedhours',
       label: 'Análisis consumo de VM horario Hábil y No Hábil',
-      icon: <AlarmClock className='mr-2 h-5 w-50'/>
+      icon: <AlarmClock className='mr-2 h-5 w-50' />
     }
   ]
+
+  const topCategories = [
+    { value: 'resources', label: 'Cantidad de Recursos', icon: <Database className='mr-2 h-5 w-5' /> },
+    { value: 'billing', label: 'Dolares Facturados', icon: <DollarSign className='mr-2 h-5 w-5' /> },
+  ];
 
   useEffect(() => {
     setIsLoading(true)
     setTimeout(() => setIsLoading(false), 800)
   }, [])
 
-  const handleCategoryChange = (value: string) => {
+  const handleFunctionsChange = (value: string) => {
     setIsLoading(true)
     setSelectedValue(value)
     setTimeout(() => setIsLoading(false), 800)
   }
 
-  const renderIframe = () => {
+  const handleCategoryChange = (value: string) => {
+    setSelectedCategory(value);
+  }
+
+  const renderFunctionsIframe = () => {
     switch (selectedValue) {
       case 'blobvsstorage':
         return <MainViewBlobStorage />
@@ -86,17 +96,17 @@ export const MainViewComponents = () => {
       case 'vmssunusedwithresources':
         return <MainViewVmssUnusedWithResources />
       case 'topresources':
-        return <MainViewTopByCategory />
+        return <MainViewTopByCategory selectedCategory={selectedCategory} />
       case 'usagebylocation':
         return <MainViewTopResourcesByLocation />
       case 'comparitionresourceusage':
         return <MainViewIncrementoUsoRecursos />
       case 'vmextensions':
-        return <MainViewVmExtensions/>
+        return <MainViewVmExtensions />
       case 'toptenusageresources':
-        return <MainViewTopTenUsageNoUsageResources/>
+        return <MainViewTopTenUsageNoUsageResources />
       case 'vmusageopenclosedhours':
-        return <MainViewUsageVmOpenClosedHours/>
+        return <MainViewUsageVmOpenClosedHours />
 
       default:
         return null
@@ -106,7 +116,7 @@ export const MainViewComponents = () => {
   return (
     <div className='w-full max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-6'>
       <div className='w-full bg-white rounded-xl shadow-sm p-3 sm:p-6 border border-slate-200'>
-        <Select onValueChange={handleCategoryChange} defaultValue='blobvsstorage'>
+        <Select onValueChange={handleFunctionsChange} defaultValue='blobvsstorage'>
           <SelectTrigger
             className={cn(
               'text-base sm:text-lg font-medium py-3 sm:py-6 px-3 sm:px-4 border border-slate-300 rounded-lg shadow-sm',
@@ -143,10 +153,44 @@ export const MainViewComponents = () => {
               </div>
             </div>
           ) : (
-            <div className='transition-all duration-300 ease-in-out'>{renderIframe()}</div>
+            selectedValue === 'topresources' ? (
+              <>
+                <div className='px-10'>
+                  <Select onValueChange={handleCategoryChange} defaultValue='resources'>
+                    <SelectTrigger
+                      className={cn(
+                        'text-base sm:text-lg font-medium py-3 sm:py-6 px-3 sm:px-4 border border-slate-300 rounded-lg shadow-sm',
+                        'hover:border-slate-400 transition-all duration-200',
+                        'focus:ring-2 focus:ring-slate-200 focus:border-slate-400',
+                        'border-slate-400 bg-slate-50',
+                      )}
+                    >
+                      <SelectValue placeholder='Seleccione una categoría...' />
+                    </SelectTrigger>
+                    <SelectContent className='bg-white rounded-lg shadow-lg border border-slate-200'>
+                      {topCategories.map((category) => (
+                        <SelectItem
+                          key={category.value}
+                          value={category.value}
+                          className='py-3 px-2 text-base font-medium cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-md my-1 flex items-center'
+                        >
+                          <div className='flex items-center'>
+                            {category.icon}
+                            {category.label}
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
+              </>
+            ) : (
+              <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
+            )
           )}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
