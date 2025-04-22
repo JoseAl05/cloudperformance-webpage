@@ -1,10 +1,10 @@
 'use client'
 
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { MainViewSidebar } from './MainViewSidebar';
-import { useEffect, useState } from 'react';
+import { CollapseSidebar } from './CollapseSidebar';
 
 
 export const MobileSidebar = () => {
@@ -29,7 +29,7 @@ export const MobileSidebar = () => {
             </SheetTrigger>
             <SheetContent side='left' className='p-0'>
                 <SheetTitle></SheetTitle>
-                <MainViewSidebar />
+                <CollapseSidebar/>
             </SheetContent>
         </Sheet>
     );

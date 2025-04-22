@@ -1,4 +1,4 @@
-import { AlertComponent } from '@/components/AlertComponent';
+import { AlertComponent } from '@/components/home/AlertComponent';
 import Head from 'next/head';
 import Image from "next/image";
 import Link from 'next/link';

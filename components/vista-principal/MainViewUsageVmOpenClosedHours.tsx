@@ -1,7 +1,7 @@
-import { ChartBar, Info } from 'lucide-react'
+import { AlarmClock, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const MainViewIncrementoUsoRecursos = () => {
+export const MainViewUsageVmOpenClosedHours = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -20,10 +20,10 @@ export const MainViewIncrementoUsoRecursos = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ChartBar className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <AlarmClock className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Comparación utilización de recursos por fecha
+                                Análisis consumo VMs Horario Hábil y No Hábil
                             </h2>
                         </div>
                         <button
@@ -60,7 +60,7 @@ export const MainViewIncrementoUsoRecursos = () => {
                                 title='Cloudperformance2.0'
                                 width='1280'
                                 height='720'
-                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=ab7bb1002b8bc1574ead  '
+                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=3bd4926a73ffc6a8ad81'
                                 className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'

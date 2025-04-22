@@ -1,4 +1,4 @@
-import { ResourceVmView } from '@/components/ResourceVmView';
+import { ResourceVmView } from '@/components/vista-vms/ResourceVmView';
 
 export default function ResourcesVmPage() {
     return (

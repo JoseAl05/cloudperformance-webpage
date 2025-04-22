@@ -1,16 +1,19 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database } from 'lucide-react'
+import { AlarmClock, ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database, TrendingUpDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 import { MainViewBlobStorage } from './MainViewBlobStorage'
 import { MainViewSpotVm } from './MainViewSpotVm'
 import { MainViewVmUnusedWithResources } from './MainViewVmUnusedWithResources'
 import { MainViewVmssUnusedWithResources } from './MainViewVmssUnusedWithResources'
-import { MainViewTopResources } from './MainViewTopResources'
+import { MainViewTopByCategory } from './MainViewTopByCategory'
 import { MainViewTopResourcesByLocation } from './MainViewTopResourcesByLocation'
 import { MainViewIncrementoUsoRecursos } from './MainViewIncrementoUsoRecursos'
+import { MainViewVmExtensions } from './MainViewVmExtensions'
+import { MainViewTopTenUsageNoUsageResources } from './MainViewTopTenUsageNoUsageResources'
+import { MainViewUsageVmOpenClosedHours } from './MainViewUsageVmOpenClosedHours'
 
 export const MainViewComponents = () => {
   const [selectedValue, setSelectedValue] = useState('blobvsstorage')
@@ -43,6 +46,21 @@ export const MainViewComponents = () => {
       value: 'comparitionresourceusage',
       label: 'Comparación utilización de recursos por fecha',
       icon: <ChartBar className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'vmextensions',
+      label: 'Extensiones Máquinas Virtuales en Desuso',
+      icon: <Computer className='mr-2 h-5 w-5' />
+    },
+    {
+      value: 'toptenusageresources',
+      label: 'Top 10 Recursos más y menos utilizados',
+      icon: <TrendingUpDown className='mr-2 h-5 w-50'/>
+    },
+    {
+      value: 'vmusageopenclosedhours',
+      label: 'Análisis consumo de VM horario Hábil y No Hábil',
+      icon: <AlarmClock className='mr-2 h-5 w-50'/>
     }
   ]
 
@@ -68,11 +86,18 @@ export const MainViewComponents = () => {
       case 'vmssunusedwithresources':
         return <MainViewVmssUnusedWithResources />
       case 'topresources':
-        return <MainViewTopResources />
+        return <MainViewTopByCategory />
       case 'usagebylocation':
         return <MainViewTopResourcesByLocation />
       case 'comparitionresourceusage':
         return <MainViewIncrementoUsoRecursos />
+      case 'vmextensions':
+        return <MainViewVmExtensions/>
+      case 'toptenusageresources':
+        return <MainViewTopTenUsageNoUsageResources/>
+      case 'vmusageopenclosedhours':
+        return <MainViewUsageVmOpenClosedHours/>
+
       default:
         return null
     }

@@ -1,9 +1,7 @@
-'use client'
-
-import { ArrowDownWideNarrow, Info } from 'lucide-react'
+import { Computer, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const MainViewTopResources = () => {
+export const MainViewVmExtensions = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -22,10 +20,10 @@ export const MainViewTopResources = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ArrowDownWideNarrow className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <Computer className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Top Recursos por Categoría
+                                Extensiones de VMs en Desuso
                             </h2>
                         </div>
                         <button
@@ -40,7 +38,7 @@ export const MainViewTopResources = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra la cantidad de recursos o los dolares facturados agrupados por distintas categorías.
+                                Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
                             </p>
                         </div>
                     )}
@@ -62,8 +60,8 @@ export const MainViewTopResources = () => {
                                 title='Cloudperformance2.0'
                                 width='1280'
                                 height='720'
-                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=89d7069a057406d0cd64'
-                                className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh]'
+                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=e37c4a120e60b8b537e0'
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
@@ -74,14 +72,14 @@ export const MainViewTopResources = () => {
             </div>
 
             <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out forwards;
-        }
-      `}</style>
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+          }
+        `}</style>
         </div>
     )
 }

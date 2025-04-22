@@ -1,4 +1,4 @@
-import { TableitemsAzure } from '@/components/TableItemsAzure';
+import { TableitemsAzure } from '@/components/vista-tabla-items/TableItemsAzure';
 
 export default function ItemsTableView (){
     return (

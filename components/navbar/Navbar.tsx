@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LogoComponent } from './LogoComponent';
-import { MobileSidebar } from './MainViewMobileSidebar';
+import { LogoComponent } from '../sidebar/LogoComponent';
+import { MobileSidebar } from '../sidebar/MainViewMobileSidebar';
 import { cn } from '@/lib/utils';
 import { BellIcon, Menu, Settings2, X } from 'lucide-react';
 import { ModeToggle } from './TogglerMode';

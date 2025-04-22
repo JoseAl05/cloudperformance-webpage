@@ -1,4 +1,4 @@
-import { MainViewConsume } from '@/components/MainViewConsume'
+import { MainViewConsume } from '@/components/vista-consumo/MainViewConsume'
 
 export default function ConsumeView (){
     return (

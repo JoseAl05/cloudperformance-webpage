@@ -1,5 +1,5 @@
-import { CollapseSidebar } from '@/components/CollapseSidebar';
-import { Navbar } from '@/components/Navbar';
+import { CollapseSidebar } from '@/components/sidebar/CollapseSidebar';
+import { Navbar } from '@/components/navbar/Navbar';
 import { Separator } from '@/components/ui/separator';
 
 export default function Layout({ children }: { children: React.ReactNode }) {

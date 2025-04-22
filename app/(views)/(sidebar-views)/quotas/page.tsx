@@ -1,4 +1,4 @@
-import { QuotasViews } from '@/components/SidebarViewQuotas';
+import { QuotasViews } from '@/components/vista-quotas/SidebarViewQuotas';
 
 
 

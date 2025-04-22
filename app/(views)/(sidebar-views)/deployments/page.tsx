@@ -1,4 +1,4 @@
-import { DeploymentsView } from '@/components/SidebarViewDeployments';
+import { DeploymentsView } from '@/components/vista-deployments/SidebarViewDeployments';
 
 export default function DeploymentsPage() {
     return (

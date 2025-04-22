@@ -1,4 +1,4 @@
-import { MainViewTreemap } from '@/components/MainViewTreemap';
+import { MainViewTreemap } from '@/components/treemap/MainViewTreemap';
 
 export default function AhorroView (){
     return (
