@@ -10,6 +10,7 @@ import { MainViewTopBilling } from './MainViewTopBilling'
 export const MainViewTopByCategory = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
+    const [selectedValue, setSelectedValue] = useState('resources');
 
     const handleCategoryChange = (value: string) => {
         setIsLoading(true)
