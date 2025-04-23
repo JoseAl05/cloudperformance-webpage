@@ -2,12 +2,13 @@
 
 import { useState } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Database, HardDrive, Server } from 'lucide-react'
+import { Database, Grid2X2, HardDrive, Info, Server } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export const MainViewConsume = () => {
   const [selectedValue, setSelectedValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showInfo, setShowInfo] = useState(false)
 
   const categories = [
     { value: 'maquinasvirtuales', label: 'Máquinas Virtuales', icon: <Server className='mr-2 h-5 w-5' /> },
@@ -20,6 +21,22 @@ export const MainViewConsume = () => {
     setSelectedValue(value)
     // Simulate loading time for iframe
     setTimeout(() => setIsLoading(false), 800)
+  }
+
+  let viewTitle = '';
+
+  switch (selectedValue) {
+    case 'maquinasvirtuales':
+      viewTitle = 'Máquinas Virtuales'
+    break;
+    case 'basesdedatos':
+      viewTitle = 'Bases de Datos'
+    break;
+    case 'nodos':
+      viewTitle = 'Nodos'
+    break;
+    default:
+      break;
   }
 
   const renderIframe = () => {
@@ -107,7 +124,36 @@ export const MainViewConsume = () => {
               </div>
             </div>
           ) : selectedValue ? (
-            <div className='transition-all duration-300 ease-in-out'>{renderIframe()}</div>
+            <>
+              <div className='p-3 sm:p-6 border-b border-slate-200 bg-slate-50'>
+                <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
+                  <div className='flex items-center gap-2 sm:gap-3'>
+                    <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
+                      <Grid2X2 className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                    </div>
+                    <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
+                      {viewTitle}
+                    </h2>
+                  </div>
+                  <button
+                    onClick={() => setShowInfo(!showInfo)}
+                    className='self-end sm:self-auto p-1.5 sm:p-2 rounded-full hover:bg-slate-200 transition-colors'
+                    aria-label='Mostrar información'
+                  >
+                    <Info className='h-4 w-4 sm:h-5 sm:w-5 text-slate-600' />
+                  </button>
+                </div>
+
+                {showInfo && (
+                  <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
+                    <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
+                      Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className='transition-all duration-300 ease-in-out'>{renderIframe()}</div>
+            </>
           ) : (
             <div className='w-full h-[70vh] flex items-center justify-center bg-slate-50 rounded-lg border border-dashed border-slate-300'>
               <div className='text-center p-6'>
