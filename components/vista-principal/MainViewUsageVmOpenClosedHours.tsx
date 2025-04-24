@@ -38,7 +38,7 @@ export const MainViewUsageVmOpenClosedHours = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
+                                Esta visualización muestra el comportamiento de Máquinas Virtuales en horario hábil (Lunes a Viernes desde 8:00 AM hasta 18:00 PM) y horario no hábil (Sabado y Domingo desde 18:00 PM hasta 8:00 AM).
                             </p>
                         </div>
                     )}

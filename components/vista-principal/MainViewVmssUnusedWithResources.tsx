@@ -38,7 +38,7 @@ export const MainViewVmssUnusedWithResources = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra las máquinas virtuales que tienen una utilización de sus componentes (CPU y Memoria) bajo un 10%. Adicionalmente se pueden ver Discos, Interfaces, IPs asignadas a las máquinas seleccionadas.
+                                Esta visualización muestra las Virtual Machine Scale Set, con modo de orquestación Uniforme, que tienen una utilización de sus componentes de computo (CPU y Memoria) bajo un 10%. Aquí se mostraran los recursos asignados (Discos, Interfaces de Red, Ips Públicas, Cores de CPU, GB de Memoria, IOPS Soportados) a las máquinas que cumplan con la condicion anteriormente mencionada. También se mostrará el % Promedio Usado y No Usado de las distintas métricas disponibles para las Máquinas Virtuales.
                             </p>
                         </div>
                     )}

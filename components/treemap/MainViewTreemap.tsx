@@ -40,7 +40,7 @@ export const MainViewTreemap = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
+                                Esta visualización muestra la ponderación de las métricas relacionadas con el no uso de recursos que tienen un costo fijo. Por ejemplo, si se recolectan cuatro métricas distintas de un recurso, a cada una se le asigna un peso igual del 25%. A partir de estas métricas, se estima una posibilidad aproximada de ahorro, calculada en función de la diferencia entre la cantidad total asignada al recurso (como núcleos de CPU, GB de memoria, etc.) y la cantidad realmente facturada.
                             </p>
                         </div>
                     )}

@@ -55,7 +55,7 @@ export const MainViewTopByCategory = ({ selectedCategory }: { selectedCategory: 
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra la cantidad de recursos o los dolares facturados agrupados por distintas categorías.
+                                Ésta visualización un Top de Cantidad de Recursos y Dolares Facturados, agrupados por Suscripción, Grupo de Recursos, Servicio o Proveedor y Localización.
                             </p>
                         </div>
                     )}

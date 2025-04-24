@@ -39,7 +39,7 @@ export const ResourceVmView = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
+                                Esta visualización muestra un detalle completo de una máquina virtual seleccionada: sus características, deployments asociados, costos (fijos y por uso), medidas facturadas y detalles de cada facturación.
                             </p>
                         </div>
                     )}

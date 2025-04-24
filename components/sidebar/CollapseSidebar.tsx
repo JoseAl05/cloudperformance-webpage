@@ -16,7 +16,7 @@ import {
   ChevronRight,
   ChevronDown,
   Server,
-  HardDrive,
+  // HardDrive,
   Grid2X2,
   Table2,
 } from 'lucide-react'
@@ -135,24 +135,24 @@ export const CollapseSidebar = () => {
           href: '/recursos/maquinas-virtuales',
           color: 'text-orange-500',
         },
-        {
-          label: 'Bases de Datos',
-          icon: HardDrive,
-          href: '/recursos/bases-de-datos',
-          color: 'text-orange-600',
-        },
-        {
-          label: 'Virtual Machine Scale Set',
-          icon: Server,
-          href: '/recursos/vmss',
-          color: 'text-orange-700',
-        },
-        {
-          label: 'Nodos K8S',
-          icon: Server,
-          href: '/recursos/nodos',
-          color: 'text-orange-700',
-        },
+        // {
+        //   label: 'Bases de Datos',
+        //   icon: HardDrive,
+        //   href: '/recursos/bases-de-datos',
+        //   color: 'text-orange-600',
+        // },
+        // {
+        //   label: 'Virtual Machine Scale Set',
+        //   icon: Server,
+        //   href: '/recursos/vmss',
+        //   color: 'text-orange-700',
+        // },
+        // {
+        //   label: 'Nodos K8S',
+        //   icon: Server,
+        //   href: '/recursos/nodos',
+        //   color: 'text-orange-700',
+        // },
       ],
     }
   ]

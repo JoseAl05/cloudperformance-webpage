@@ -40,7 +40,7 @@ export const MainViewTopResourcesByLocation = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra el promedio de uso de recursos por localización.
+                                Esta visualización muestra el uso promedio de CPU, memoria e IOPS de las máquinas virtuales, agrupado por localización geográfica
                             </p>
                         </div>
                     )}

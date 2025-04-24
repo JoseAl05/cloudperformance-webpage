@@ -40,7 +40,7 @@ export const TableitemsAzure = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra 3 tablas con informacion sobre las servicios registrados, grupos de recursos y cuentas de facturación.
+                                Esta visualización muestra tres tablas con ítems registrados en la nube: servicios registrados, grupos de recursos y cuentas de facturación.
                             </p>
                         </div>
                     )}

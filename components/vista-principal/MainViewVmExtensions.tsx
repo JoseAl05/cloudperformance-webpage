@@ -38,7 +38,7 @@ export const MainViewVmExtensions = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización compara la utilización general de servicios de Storage bajo un Storage Account (File Service, Queue Service, Table Service) vs la utilización de Blob Storage
+                                Esta visualización muestra las máquinas virtuales que tienen extenesiones desactualizadas y si tienen la auto actualización deshabilitada.
                             </p>
                         </div>
                     )}

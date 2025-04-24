@@ -38,7 +38,7 @@ export const MainViewSpotVm = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización compara la cantidad de VM tipo Spot vs VM tipo Regular en la nube.
+                                Esta visualización muestra la comparación, a lo largo del tiempo, entre la cantidad de máquinas virtuales tipo Spot y las máquinas virtuales tipo Regular en la nube.
                             </p>
                         </div>
                     )}
