@@ -75,7 +75,7 @@ export const MainViewBlobStorage = () => {
                 src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=92a89cfa772bf8ed3902'
                 className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
-                frameBorder='0'
+                frameBorder='1'
                 allowFullScreen={true}
               />
             </div>
