@@ -48,7 +48,7 @@ export const MainViewBlobStorage = () => {
 
         <div className='p-2 sm:p-4'>
           {isLoading ? (
-            <div className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh] flex items-center justify-center bg-slate-50 rounded-lg border border-slate-200 animate-pulse'>
+            <div className='w-full h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center bg-slate-50 rounded-lg border border-slate-200 animate-pulse'>
               <div className='flex flex-col items-center'>
                 <div className='w-12 h-12 sm:w-16 sm:h-16 border-4 border-slate-300 border-t-slate-500 rounded-full animate-spin'></div>
                 <p className='mt-3 sm:mt-4 text-sm sm:text-base text-slate-500 font-medium'>
@@ -57,27 +57,37 @@ export const MainViewBlobStorage = () => {
               </div>
             </div>
           ) : (
-            <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
-              <iframe
-                title='Cloudperformance2.0'
-                width='1280'
-                height='720'
-                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fbf0464c23583ce87060'
-                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
-                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
-                frameBorder='0'
-                allowFullScreen={true}
-              />
-              <iframe
-                title='Cloudperformance2.0'
-                width='1280'
-                height='720'
-                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=92a89cfa772bf8ed3902'
-                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
-                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
-                frameBorder='1'
-                allowFullScreen={true}
-              />
+            <div className='space-y-6'>
+
+              <div>
+                <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
+                  <iframe
+                    title='Cloudperformance - Vista General'
+                    width='1280'
+                    height='850'
+                    src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fbf0464c23583ce87060'
+                    className='w-full h-[600px] sm:h-[700px] md:h-[900px]'
+                    style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                    frameBorder='0'
+                    allowFullScreen={true}
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
+                  <iframe
+                    title='Cloudperformance - Vista Detallada'
+                    width='1280'
+                    height='2450'
+                    src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=92a89cfa772bf8ed3902'
+                    className='w-full h-[1200px] sm:h-[1800px] md:h-[2600px]'
+                    style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                    frameBorder='0'
+                    allowFullScreen={true}
+                  />
+                </div>
+              </div>
             </div>
           )}
         </div>
