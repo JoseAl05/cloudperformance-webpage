@@ -40,7 +40,7 @@ export const MainViewComponents = () => {
     },
     {
       value: 'usagebylocation',
-      label: 'Promedio de Uso por Localización',
+      label: 'Uso por Localización',
       icon: <ChartColumnBig className='mr-2 h-5 w-5' />,
     },
     {
