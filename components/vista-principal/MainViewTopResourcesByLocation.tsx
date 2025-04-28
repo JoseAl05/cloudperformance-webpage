@@ -25,7 +25,7 @@ export const MainViewTopResourcesByLocation = () => {
                                 <ChartColumnBig className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Promedio de uso por Localización.
+                                Uso por Localización.
                             </h2>
                         </div>
                         <button
