@@ -63,7 +63,7 @@ export const MainViewTopResourcesByLocation = () => {
                                 width='1280'
                                 height='720'
                                 src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=a27eeab2e062abb64398'
-                                className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh]'
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
