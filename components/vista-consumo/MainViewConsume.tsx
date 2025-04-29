@@ -48,7 +48,7 @@ export const MainViewConsume = () => {
             width='1280'
             height='720'
             src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=97ff25681034e4ee2078'
-            className='w-full h-[100vh] rounded-lg shadow-lg'
+            className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'
             allowFullScreen={true}
@@ -61,7 +61,7 @@ export const MainViewConsume = () => {
             width='1280'
             height='720'
             src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=8b5e438e3e249625e92c'
-            className='w-full h-[100vh] rounded-lg shadow-lg'
+            className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'
             allowFullScreen={true}
@@ -74,7 +74,7 @@ export const MainViewConsume = () => {
             width='1280'
             height='720'
             src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fccf1ae01c449603b42c'
-            className='w-full h-[100vh] rounded-lg shadow-lg'
+            className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'
             allowFullScreen={true}
