@@ -1,14 +1,11 @@
-import { MainViewPayGTrend } from '@/components/treemap/MainViewPayGTrend';
-import { MainViewTreemap } from '@/components/treemap/MainViewTreemap';
-import { Separator } from '@/components/ui/separator';
+import { MainViewComponents } from '@/components/vista-principal/MainViewComponents';
 
-export default function AhorroView (){
+
+export default function MainPage() {
     return (
-        <div className='mt-[70px] lg:mt-[95px] flex flex-col gap-5'>
-            <div className='flex-1 flex flex-col items-center gap-10 bg-gray-200 p-4 overflow-auto dark:bg-[#111827] md:px-16'>
-                <MainViewTreemap/>
-                <Separator className='bg-slate-500 h-5'/>
-                <MainViewPayGTrend />
+        <div className='mt-[70px] md:mt-[120px] lg:mt-[95px] flex flex-col gap-5'>
+            <div className='flex-1 flex flex-col gap-10 bg-gray-200 p-4 overflow-auto dark:bg-[#111827] md:px-16'>
+                <MainViewComponents />
             </div>
         </div>
     )
