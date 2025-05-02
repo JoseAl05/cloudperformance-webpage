@@ -82,16 +82,16 @@ export const CollapseSidebar = () => {
     },
     {
       label: 'Inicio',
-      icon: Home,
+      icon: Grid2X2,
       href: '/main-view',
       tooltip: 'Vista Principal',
       color: 'text-sky-500',
     },
     {
-      label: 'Heatmap y Tendencia Pago por Uso',
-      icon: Grid2X2,
+      label: 'Funciones',
+      icon: Home,
       href: '/ahorro',
-      tooltip: 'Heatmap y Tendencia Pago por Uso',
+      tooltip: 'Funciones',
       color: 'text-teal-500',
     },
     {
