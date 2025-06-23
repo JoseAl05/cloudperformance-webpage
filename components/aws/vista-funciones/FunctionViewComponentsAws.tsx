@@ -3,9 +3,10 @@ import { useState, useEffect, JSX } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 
-import { AlarmClock, Database } from 'lucide-react'
+import { AlarmClock, Computer, Database } from 'lucide-react'
 import { FunctionViewUsageByLocationSelectionAws } from './FunctionViewUsageByLocationSelectionAws'
 import { FunctionViewUsageOpenClosedHoursSelectionAws } from './FunctionViewUsageOpenClosedHoursSelectionAws'
+import { FunctionViewSpotVmAws } from './FunctionViewSpotVmAws'
 
 
 export const FunctionViewComponentsAws = () => {
@@ -22,6 +23,11 @@ export const FunctionViewComponentsAws = () => {
       value: 'usageopenclosedhours',
       label: 'Análisis consumo de VM horario Hábil y No Hábil',
       icon: <AlarmClock className='mr-2 h-5 w-50' />
+    },
+    {
+      value: 'spotec2vsec2',
+      label: 'Instancias EC2 Spot vs Instancias EC2',
+      icon: <Computer className='mr-2 h-5 w-5' />
     }
   ]
 
@@ -41,7 +47,8 @@ export const FunctionViewComponentsAws = () => {
   // }
   const componentMap: Record<string, JSX.Element> = {
     usagebylocation: <FunctionViewUsageByLocationSelectionAws />,
-    usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />
+    usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />,
+    spotec2vsec2: <FunctionViewSpotVmAws/>
   }
 
   const renderFunctionsIframe = () => componentMap[selectedValue] || null
