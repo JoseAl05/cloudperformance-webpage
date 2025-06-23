@@ -161,7 +161,7 @@ export const CollapseSidebarAzure = () => {
       icon: Pyramid,
       href: '/azure/advisor',
       tooltip: 'Vista Asesor',
-      color: 'text-color-[#3258de]',
+      color: 'text-[#3258de]',
     }
   ]
 
