@@ -8,7 +8,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
   Box,
-  Cloud,
   Home,
   PieChart,
   Zap,
@@ -73,13 +72,13 @@ export const CollapseSidebarAWS = () => {
   }
 
   const routes = [
-    {
-      label: 'Azure',
-      icon: Cloud,
-      href: '#',
-      tooltip: 'Azure',
-      color: 'text-blue-600',
-    },
+    // {
+    //   label: 'Azure',
+    //   icon: Cloud,
+    //   href: '#',
+    //   tooltip: 'Azure',
+    //   color: 'text-blue-600',
+    // },
     {
       label: 'Inicio',
       icon: Grid2X2,
