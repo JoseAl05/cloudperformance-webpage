@@ -62,7 +62,9 @@ export const AdvisorViewComponent = () => {
                                 width="1280"
                                 height="720"
                                 src="https://app.powerbi.com/view?r=eyJrIjoiYmFmOTc1YWYtMTQ4Yi00ODdlLTljODQtYzZmNDM0MDk5NjQyIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4c51adbf38190d1e7e76"
-                                frameBorder="0"
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
                                 allowFullScreen={true}
                             />
                         </div>
