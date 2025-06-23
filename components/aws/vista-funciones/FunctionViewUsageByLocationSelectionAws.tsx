@@ -5,11 +5,7 @@ import { CategorySelection } from './CategorySelection';
 import { useState } from 'react';
 import { FunctionViewUsageByLocationRdsMysqlAws } from './FunctionViewUsageByLocationRdsMysqlAws';
 
-export const FunctionViewUsageByLocationSelectionAws = ({
-    selectedValue
-}: {
-    selectedValue: string;
-}) => {
+export const FunctionViewUsageByLocationSelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('iec2');
     const services = [
         { value: 'iec2', label: 'Instancias EC2', icon: <Computer className='mr-2 h-5 w-5' /> },
@@ -36,19 +32,15 @@ export const FunctionViewUsageByLocationSelectionAws = ({
 
 
     return (
-        selectedValue === 'usagebylocation' ? (
-            <>
-                <div className='px-10'>
-                    <CategorySelection
-                        handleCategoryChange={handleCategoryChange}
-                        categories={services}
-                    />
-                </div>
-                <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
-            </>
-        ) : (
+        <>
+            <div className='px-10'>
+                <CategorySelection
+                    handleCategoryChange={handleCategoryChange}
+                    categories={services}
+                />
+            </div>
             <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
-        )
+        </>
     )
 
 }
