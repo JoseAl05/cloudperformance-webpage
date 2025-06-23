@@ -1,10 +1,11 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, JSX } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 
-import { Database } from 'lucide-react'
+import { AlarmClock, Database } from 'lucide-react'
 import { FunctionViewUsageByLocationSelectionAws } from './FunctionViewUsageByLocationSelectionAws'
+import { FunctionViewUsageOpenClosedHoursSelectionAws } from './FunctionViewUsageOpenClosedHoursSelectionAws'
 
 
 export const FunctionViewComponentsAws = () => {
@@ -12,8 +13,16 @@ export const FunctionViewComponentsAws = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const categories = [
-    { value: 'usagebylocation', label: 'Volumen Total de Uso por Localización', icon: <Database className='mr-2 h-5 w-5' /> },
-
+    {
+      value: 'usagebylocation',
+      label: 'Volumen Total de Uso por Localización',
+      icon: <Database className='mr-2 h-5 w-5' />
+    },
+    {
+      value: 'usageopenclosedhours',
+      label: 'Análisis consumo de VM horario Hábil y No Hábil',
+      icon: <AlarmClock className='mr-2 h-5 w-50' />
+    }
   ]
 
   useEffect(() => {
@@ -30,15 +39,12 @@ export const FunctionViewComponentsAws = () => {
   // const handleCategoryChange = (value: string) => {
   //   setSelectedCategory(value);
   // }
-
-  const renderFunctionsIframe = () => {
-    switch (selectedValue) {
-      case 'usagebylocation':
-        return <FunctionViewUsageByLocationSelectionAws selectedValue={selectedValue} />
-      default:
-        return null
-    }
+  const componentMap: Record<string, JSX.Element> = {
+    usagebylocation: <FunctionViewUsageByLocationSelectionAws />,
+    usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />
   }
+
+  const renderFunctionsIframe = () => componentMap[selectedValue] || null
 
   return (
     <div className='w-full max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-6'>
@@ -80,13 +86,7 @@ export const FunctionViewComponentsAws = () => {
               </div>
             </div>
           ) : (
-            selectedValue === 'usagebylocation' ? (
-              <FunctionViewUsageByLocationSelectionAws
-                selectedValue={selectedValue}
-              />
-            ) : (
-              <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
-            )
+            <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
           )}
         </div>
       </div>
