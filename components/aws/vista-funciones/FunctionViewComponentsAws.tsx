@@ -7,6 +7,7 @@ import { AlarmClock, Computer, Database } from 'lucide-react'
 import { FunctionViewUsageByLocationSelectionAws } from './FunctionViewUsageByLocationSelectionAws'
 import { FunctionViewUsageOpenClosedHoursSelectionAws } from './FunctionViewUsageOpenClosedHoursSelectionAws'
 import { FunctionViewSpotVmAws } from './FunctionViewSpotVmAws'
+import { FunctionViewEc2UnusedWithResources } from './FunctionViewEc2UnusedWithResources'
 
 
 export const FunctionViewComponentsAws = () => {
@@ -28,7 +29,12 @@ export const FunctionViewComponentsAws = () => {
       value: 'spotec2vsec2',
       label: 'Instancias EC2 Spot vs Instancias EC2',
       icon: <Computer className='mr-2 h-5 w-5' />
-    }
+    },
+    {
+      value: 'ec2unusedwithresources',
+      label: 'Instancias EC2 no utilizadas con recursos asignados',
+      icon: <Computer className='mr-2 h-5 w-5' />,
+    },
   ]
 
   useEffect(() => {
@@ -48,7 +54,8 @@ export const FunctionViewComponentsAws = () => {
   const componentMap: Record<string, JSX.Element> = {
     usagebylocation: <FunctionViewUsageByLocationSelectionAws />,
     usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />,
-    spotec2vsec2: <FunctionViewSpotVmAws/>
+    spotec2vsec2: <FunctionViewSpotVmAws/>,
+    ec2unusedwithresources: <FunctionViewEc2UnusedWithResources/>
   }
 
   const renderFunctionsIframe = () => componentMap[selectedValue] || null
