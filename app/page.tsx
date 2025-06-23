@@ -1,4 +1,4 @@
-import { AlertComponent } from '@/components/home/AlertComponent';
+import { AlertComponent } from '@/components/azure/home/AlertComponent';
 import Head from 'next/head';
 import Image from "next/image";
 import Link from 'next/link';
@@ -25,8 +25,11 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-gray-800 mt-4">
             Cloud Performance
           </h1>
-          <Link href='/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
-            Dashboards
+          <Link href='/azure/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
+            Dashboards Azure
+          </Link>
+          <Link href='/aws/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
+            Dashboards AWS
           </Link>
         </div>
       </main>

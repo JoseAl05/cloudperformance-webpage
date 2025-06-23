@@ -2,15 +2,15 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LogoComponent } from '../sidebar/LogoComponent';
-import { MobileSidebar } from '../sidebar/MainViewMobileSidebar';
+import { LogoComponent } from '../LogoComponent';
+import { MobileSidebar } from '../azure/sidebar/MainViewMobileSidebar';
 import { cn } from '@/lib/utils';
 import { BellIcon, Menu, Settings2, X } from 'lucide-react';
-import { ModeToggle } from './TogglerMode';
 import { Button } from '@/components/ui/button';
 import { Montserrat } from "next/font/google";
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import { ModeToggle } from './TogglerMode';
 
 interface NavLink {
     name: string;
