@@ -9,15 +9,16 @@ import { usePathname } from 'next/navigation'
 import {
   Box,
   Home,
-  PieChart,
+  // PieChart,
   Zap,
   LineChart,
   ChevronRight,
   ChevronDown,
   Server,
   // HardDrive,
-  Grid2X2,
-  Table2,
+  // Grid2X2,
+  // Table2,
+  HardDrive,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -79,13 +80,13 @@ export const CollapseSidebarAWS = () => {
     //   tooltip: 'Azure',
     //   color: 'text-blue-600',
     // },
-    {
-      label: 'Inicio',
-      icon: Grid2X2,
-      href: '/aws/main-view',
-      tooltip: 'Vista Principal',
-      color: 'text-sky-500',
-    },
+    // {
+    //   label: 'Inicio',
+    //   icon: Grid2X2,
+    //   href: '/aws/main-view',
+    //   tooltip: 'Vista Principal',
+    //   color: 'text-sky-500',
+    // },
     {
       label: 'Funciones',
       icon: Home,
@@ -100,13 +101,13 @@ export const CollapseSidebarAWS = () => {
       tooltip: 'Vista Consumos',
       color: 'text-green-600',
     },
-    {
-      label: 'Quotas',
-      icon: PieChart,
-      href: '/aws/quotas',
-      tooltip: 'Vista Quotas',
-      color: 'text-violet-500',
-    },
+    // {
+    //   label: 'Quotas',
+    //   icon: PieChart,
+    //   href: '/aws/quotas',
+    //   tooltip: 'Vista Quotas',
+    //   color: 'text-violet-500',
+    // },
     {
       label: 'Deployments',
       icon: Zap,
@@ -114,13 +115,13 @@ export const CollapseSidebarAWS = () => {
       tooltip: 'Vista Deployments',
       color: 'text-pink-500',
     },
-    {
-      label: 'Tablas de Items de Azure',
-      icon: Table2,
-      href: '/aws/items-tables',
-      tooltip: 'Tablas de Items de Azure',
-      color: 'text-red-500',
-    },
+    // {
+    //   label: 'Tablas de Items de Azure',
+    //   icon: Table2,
+    //   href: '/aws/items-tables',
+    //   tooltip: 'Tablas de Items de Azure',
+    //   color: 'text-red-500',
+    // },
     {
       label: 'Recursos',
       icon: Box,
@@ -129,23 +130,23 @@ export const CollapseSidebarAWS = () => {
       color: 'text-orange-600',
       subItems: [
         {
-          label: 'Máquinas Virtuales',
+          label: 'Instancias EC2',
           icon: Server,
-          href: '/aws/recursos/maquinas-virtuales',
+          href: '/aws/recursos/instancias-ec2',
           color: 'text-orange-500',
         },
-        // {
-        //   label: 'Bases de Datos',
-        //   icon: HardDrive,
-        //   href: '/recursos/bases-de-datos',
-        //   color: 'text-orange-600',
-        // },
-        // {
-        //   label: 'Virtual Machine Scale Set',
-        //   icon: Server,
-        //   href: '/recursos/vmss',
-        //   color: 'text-orange-700',
-        // },
+        {
+          label: 'Instancias RDS Postgresql',
+          icon: HardDrive,
+          href: '/aws/recursos/instancias-rds-pg',
+          color: 'text-orange-600',
+        },
+        {
+          label: 'Instancias RDS Mysql',
+          icon: HardDrive,
+          href: '/aws/recursos/instancias-rds-mysql',
+          color: 'text-orange-600',
+        },
         // {
         //   label: 'Nodos K8S',
         //   icon: Server,

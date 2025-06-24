@@ -3,11 +3,14 @@ import { useState, useEffect, JSX } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 
-import { AlarmClock, Computer, Database } from 'lucide-react'
+import { AlarmClock, ArrowDownWideNarrow, Computer, Database, HardDrive } from 'lucide-react'
 import { FunctionViewUsageByLocationSelectionAws } from './FunctionViewUsageByLocationSelectionAws'
 import { FunctionViewUsageOpenClosedHoursSelectionAws } from './FunctionViewUsageOpenClosedHoursSelectionAws'
 import { FunctionViewSpotVmAws } from './FunctionViewSpotVmAws'
 import { FunctionViewEc2UnusedWithResources } from './FunctionViewEc2UnusedWithResources'
+import { FunctionViewEbsVolumesUnusedAws } from './FunctionViewEbsVolumesUnusedAws'
+import { FunctionViewTopS3BucketsAws } from './FunctionViewTopS3BucketsAws'
+import { FunctionViewTopResourcesByCategorySelectionAws } from './FunctionViewTopResourcesByCategorySelectionAws'
 
 
 export const FunctionViewComponentsAws = () => {
@@ -35,6 +38,21 @@ export const FunctionViewComponentsAws = () => {
       label: 'Instancias EC2 no utilizadas con recursos asignados',
       icon: <Computer className='mr-2 h-5 w-5' />,
     },
+    {
+      value: 'ebsvolumesunused',
+      label: 'Volúmenes EBS No Utilizados',
+      icon: <HardDrive className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'tops3buckets',
+      label: 'Top S3 Buckets',
+      icon: <Database className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'topresources',
+      label: 'Top Recursos por Categoría',
+      icon: <ArrowDownWideNarrow className='mr-2 h-5 w-5' />
+    }
   ]
 
   useEffect(() => {
@@ -55,7 +73,10 @@ export const FunctionViewComponentsAws = () => {
     usagebylocation: <FunctionViewUsageByLocationSelectionAws />,
     usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />,
     spotec2vsec2: <FunctionViewSpotVmAws/>,
-    ec2unusedwithresources: <FunctionViewEc2UnusedWithResources/>
+    ec2unusedwithresources: <FunctionViewEc2UnusedWithResources/>,
+    ebsvolumesunused: <FunctionViewEbsVolumesUnusedAws />,
+    tops3buckets: <FunctionViewTopS3BucketsAws />,
+    topresources: <FunctionViewTopResourcesByCategorySelectionAws />
   }
 
   const renderFunctionsIframe = () => componentMap[selectedValue] || null

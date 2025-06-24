@@ -2,19 +2,21 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { cn } from '@/lib/utils';
 import { JSX } from 'react';
 
-export const CategorySelection = ({
+export const CategorySelectionAws = ({
     handleCategoryChange,
-    categories
+    categories,
+    defaultValue
 }:{
     handleCategoryChange: (value:string) => void;
     categories:{
         value:string;
         label:string;
         icon:JSX.Element
-    }[]
+    }[];
+    defaultValue: string;
 }) => {
     return (
-        <Select onValueChange={handleCategoryChange} defaultValue='iec2'>
+        <Select onValueChange={handleCategoryChange} defaultValue={defaultValue}>
             <SelectTrigger
                 className={cn(
                     'text-base sm:text-lg font-medium py-3 sm:py-6 px-3 sm:px-4 border border-slate-300 rounded-lg shadow-sm',

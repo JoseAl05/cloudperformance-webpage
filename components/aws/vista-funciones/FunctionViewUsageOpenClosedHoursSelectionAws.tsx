@@ -1,5 +1,5 @@
 import { Computer, Database } from 'lucide-react';
-import { CategorySelection } from './CategorySelection';
+import { CategorySelectionAws } from '../CategorySelectionAws';
 import { useState } from 'react';
 import { FunctionViewUsageByLocationRdsMysqlAws } from './FunctionViewUsageByLocationRdsMysqlAws';
 import { FunctionViewUsageEc2OpenClosedHoursAws } from './FunctionViewUsageEc2OpenClosedHoursAws';
@@ -34,9 +34,10 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
     return (
         <>
             <div className='px-10'>
-                <CategorySelection
+                <CategorySelectionAws
                     handleCategoryChange={handleCategoryChange}
                     categories={services}
+                    defaultValue='iec2'
                 />
             </div>
             <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
