@@ -125,6 +125,6 @@ export const FunctionViewComponentsAws = () => {
           )}
         </div>
       </div>
-    </div >
+    </div>
   )
 }

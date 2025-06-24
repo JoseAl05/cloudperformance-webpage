@@ -1,14 +1,14 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, JSX } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { AlarmClock, ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database, DollarSign, TrendingUpDown } from 'lucide-react'
+import { AlarmClock, ArrowDownWideNarrow, ChartBar, ChartColumnBig, Computer, Database, TrendingUpDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 import { FunctionViewBlobStorage } from './FunctionViewBlobStorage'
 import { FunctionViewSpotVm } from './FunctionViewSpotVm'
 import { FunctionViewVmUnusedWithResources } from './FunctionViewVmUnusedWithResources'
 import { FunctionViewVmssUnusedWithResources } from './FunctionViewVmssUnusedWithResources'
-import { FunctionViewTopByCategory } from './FunctionViewTopByCategory'
+import { FunctionViewTopByCategorySelection } from './FunctionViewTopByCategorySelection'
 import { FunctionViewTopResourcesByLocation } from './FunctionViewTopResourcesByLocation'
 import { FunctionViewIncrementoUsoRecursos } from './FunctionViewIncrementoUsoRecursos'
 import { FunctionViewVmExtensions } from './FunctionViewVmExtensions'
@@ -17,12 +17,19 @@ import { FunctionViewUsageVmOpenClosedHours } from './FunctionViewUsageVmOpenClo
 
 export const FunctionViewComponentsAzure = () => {
   const [selectedValue, setSelectedValue] = useState('blobvsstorage');
-  const [selectedCategory, setSelectedCategory] = useState('resources');
   const [isLoading, setIsLoading] = useState(false)
 
   const categories = [
-    { value: 'blobvsstorage', label: 'Blob Storage vs Storage', icon: <Database className='mr-2 h-5 w-5' /> },
-    { value: 'spotvmvsvm', label: 'Spot VMs vs VMs', icon: <Computer className='mr-2 h-5 w-5' /> },
+    {
+      value: 'blobvsstorage',
+      label: 'Blob Storage vs Storage',
+      icon: <Database className='mr-2 h-5 w-5' />
+    },
+    {
+      value: 'spotvmvsvm',
+      label: 'Spot VMs vs VMs',
+      icon: <Computer className='mr-2 h-5 w-5' />
+    },
     {
       value: 'vmunusedwithresources',
       label: 'Máquinas virtuales no utilizadas con recursos asignados',
@@ -65,11 +72,6 @@ export const FunctionViewComponentsAzure = () => {
     }
   ]
 
-  const topCategories = [
-    { value: 'resources', label: 'Cantidad de Recursos', icon: <Database className='mr-2 h-5 w-5' /> },
-    { value: 'billing', label: 'Dolares Facturados', icon: <DollarSign className='mr-2 h-5 w-5' /> },
-  ];
-
   useEffect(() => {
     setIsLoading(true)
     setTimeout(() => setIsLoading(false), 800)
@@ -81,37 +83,20 @@ export const FunctionViewComponentsAzure = () => {
     setTimeout(() => setIsLoading(false), 800)
   }
 
-  const handleCategoryChange = (value: string) => {
-    setSelectedCategory(value);
+  const componentMap: Record<string, JSX.Element> = {
+    blobvsstorage: <FunctionViewBlobStorage />,
+    spotvmvsvm: <FunctionViewSpotVm />,
+    vmunusedwithresources: <FunctionViewVmUnusedWithResources />,
+    vmssunusedwithresources: <FunctionViewVmssUnusedWithResources />,
+    topresources: <FunctionViewTopByCategorySelection />,
+    usagebylocation: <FunctionViewTopResourcesByLocation />,
+    comparitionresourceusage: <FunctionViewIncrementoUsoRecursos />,
+    vmextensions:<FunctionViewVmExtensions />,
+    toptenusageresources:<FunctionViewTopTenUsageNoUsageResources />,
+    vmusageopenclosedhours: <FunctionViewUsageVmOpenClosedHours />
   }
 
-  const renderFunctionsIframe = () => {
-    switch (selectedValue) {
-      case 'blobvsstorage':
-        return <FunctionViewBlobStorage />
-      case 'spotvmvsvm':
-        return <FunctionViewSpotVm />
-      case 'vmunusedwithresources':
-        return <FunctionViewVmUnusedWithResources />
-      case 'vmssunusedwithresources':
-        return <FunctionViewVmssUnusedWithResources />
-      case 'topresources':
-        return <FunctionViewTopByCategory selectedCategory={selectedCategory} />
-      case 'usagebylocation':
-        return <FunctionViewTopResourcesByLocation />
-      case 'comparitionresourceusage':
-        return <FunctionViewIncrementoUsoRecursos />
-      case 'vmextensions':
-        return <FunctionViewVmExtensions />
-      case 'toptenusageresources':
-        return <FunctionViewTopTenUsageNoUsageResources />
-      case 'vmusageopenclosedhours':
-        return <FunctionViewUsageVmOpenClosedHours />
-
-      default:
-        return null
-    }
-  }
+  const renderFunctionsIframe = () => componentMap[selectedValue] || null
 
   return (
     <div className='w-full max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-6'>
@@ -153,44 +138,10 @@ export const FunctionViewComponentsAzure = () => {
               </div>
             </div>
           ) : (
-            selectedValue === 'topresources' ? (
-              <>
-                <div className='px-10'>
-                  <Select onValueChange={handleCategoryChange} defaultValue='resources'>
-                    <SelectTrigger
-                      className={cn(
-                        'text-base sm:text-lg font-medium py-3 sm:py-6 px-3 sm:px-4 border border-slate-300 rounded-lg shadow-sm',
-                        'hover:border-slate-400 transition-all duration-200',
-                        'focus:ring-2 focus:ring-slate-200 focus:border-slate-400',
-                        'border-slate-400 bg-slate-50',
-                      )}
-                    >
-                      <SelectValue placeholder='Seleccione una categoría...' />
-                    </SelectTrigger>
-                    <SelectContent className='bg-white rounded-lg shadow-lg border border-slate-200'>
-                      {topCategories.map((category) => (
-                        <SelectItem
-                          key={category.value}
-                          value={category.value}
-                          className='py-3 px-2 text-base font-medium cursor-pointer hover:bg-slate-50 focus:bg-slate-50 rounded-md my-1 flex items-center'
-                        >
-                          <div className='flex items-center'>
-                            {category.icon}
-                            {category.label}
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
-              </>
-            ) : (
-              <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
-            )
+            <div className='transition-all duration-300 ease-in-out'>{renderFunctionsIframe()}</div>
           )}
         </div>
       </div>
-    </div >
+    </div>
   )
 }
