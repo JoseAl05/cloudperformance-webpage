@@ -1,5 +1,5 @@
 
-import { Cpu, Globe2, Layers3, MonitorSmartphone, ReceiptText, ServerCog, ShoppingCart } from 'lucide-react';
+import { Cpu, Globe2, Layers, Layers3, MonitorSmartphone, ReceiptText, ServerCog, ShoppingCart } from 'lucide-react';
 import { CategorySelectionAws } from '../CategorySelectionAws';
 import { useState } from 'react';
 import { FunctionViewTopResourcesAmountAws } from './FunctionViewTopResourcesAmountAws';
@@ -9,6 +9,7 @@ import { FunctionViewTopResourcesCostByInstanceTypeAws } from './FunctionViewTop
 import { FunctionViewTopResourcesCostByInstanceFamilyAws } from './FunctionViewTopResourcesCostByInstanceFamilyAws';
 import { FunctionViewTopResourcesCostByPurchaseMethodAws } from './FunctionViewTopResourcesCostByPurchaseMethodAws';
 import { FunctionViewTopResourcesCostByRecordTypeAws } from './FunctionViewTopResourcesCostByRecordTypeAws';
+import { FunctionViewTopResourcesCostByResourceAws } from './FunctionViewTopResourcesCostByResourceAws';
 
 export const FunctionViewTopResourcesByCategorySelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('amountresources');
@@ -19,8 +20,8 @@ export const FunctionViewTopResourcesByCategorySelectionAws = () => {
         { value: 'costbyinstancetype', label: 'Dolares Facturados por Tipo de Instancia', icon: <ServerCog className='mr-2 h-5 w-5' /> },
         { value: 'costbyinstancefamily', label: 'Dolares Facturados por Familia de Instancia', icon: <Layers3 className='mr-2 h-5 w-5' /> },
         { value: 'costbypurchasemethod', label: 'Dolares Facturados por Tipo de Compra', icon: <ShoppingCart className='mr-2 h-5 w-5' /> },
-        { value: 'costbyrecordtype', label: 'Dolares Facturados por Tipo de Cobro', icon: <ReceiptText className='mr-2 h-5 w-5' /> }
-        // { value: 'irdsmysql', label: 'Instancias RDS Mysql', icon: <Database className='mr-2 h-5 w-5' /> },
+        { value: 'costbyrecordtype', label: 'Dolares Facturados por Tipo de Cobro', icon: <ReceiptText className='mr-2 h-5 w-5' /> },
+        { value: 'costbyresource', label: 'Dolares Facturados por Recurso', icon: <Layers className='mr-2 h-5 w-5' /> }
     ];
 
     const renderFunctionsIframe = () => {
@@ -39,6 +40,8 @@ export const FunctionViewTopResourcesByCategorySelectionAws = () => {
                 return <FunctionViewTopResourcesCostByPurchaseMethodAws />
             case 'costbyrecordtype':
                 return <FunctionViewTopResourcesCostByRecordTypeAws />
+            case 'costbyresource':
+                return <FunctionViewTopResourcesCostByResourceAws />
             default:
                 return null
         }
