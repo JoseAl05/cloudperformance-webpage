@@ -28,7 +28,7 @@ export default function Home() {
           <Link href='/azure/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
             Dashboards Azure
           </Link>
-          <Link href='/aws/ahorro' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
+          <Link href='/aws/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
             Dashboards AWS
           </Link>
         </div>
