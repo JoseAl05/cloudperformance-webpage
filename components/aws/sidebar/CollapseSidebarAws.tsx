@@ -16,9 +16,9 @@ import {
   ChevronDown,
   Server,
   // HardDrive,
-  // Grid2X2,
   // Table2,
   HardDrive,
+  Grid2X2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -80,13 +80,13 @@ export const CollapseSidebarAWS = () => {
     //   tooltip: 'Azure',
     //   color: 'text-blue-600',
     // },
-    // {
-    //   label: 'Inicio',
-    //   icon: Grid2X2,
-    //   href: '/aws/main-view',
-    //   tooltip: 'Vista Principal',
-    //   color: 'text-sky-500',
-    // },
+    {
+      label: 'Inicio',
+      icon: Grid2X2,
+      href: '/aws/main-view',
+      tooltip: 'Vista Principal',
+      color: 'text-sky-500',
+    },
     {
       label: 'Funciones',
       icon: Home,
