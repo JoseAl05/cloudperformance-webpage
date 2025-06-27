@@ -1,7 +1,7 @@
 'use client'
 import { TreemapViewBillingTrendAws } from '@/components/aws/vista-treemap/TreemapViewBillingTrendAws';
-import { TreemapViewServiceSelectionAws } from '@/components/aws/vista-treemap/TreemapViewServiceSelectionAws';
-import { Separator } from '@/components/ui/separator';
+// import { TreemapViewServiceSelectionAws } from '@/components/aws/vista-treemap/TreemapViewServiceSelectionAws';
+// import { Separator } from '@/components/ui/separator';
 
 export default function AhorroView (){
     return (

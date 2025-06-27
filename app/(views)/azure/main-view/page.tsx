@@ -1,6 +1,6 @@
 import { MainViewPayGTrend } from '@/components/azure/treemap/MainViewPayGTrend';
-import { MainViewTreemap } from '@/components/azure/treemap/MainViewTreemap';
-import { Separator } from '@/components/ui/separator';
+// import { MainViewTreemap } from '@/components/azure/treemap/MainViewTreemap';
+// import { Separator } from '@/components/ui/separator';
 
 export default function AhorroView (){
     return (
