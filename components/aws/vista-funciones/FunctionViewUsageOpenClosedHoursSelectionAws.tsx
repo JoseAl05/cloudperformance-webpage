@@ -25,9 +25,9 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
                 return <FunctionViewUsageRdsPgOpenClosedHoursAws />
             case 'irdsmysql':
                 return <FunctionViewUsageRdsMysqlOpenClosedHoursAws />
-            case 'irdsmysql':
+            case 'irdssqlserver':
                 return <FunctionViewUsageByLocationRdsSqlServerAws />
-            case 'irdsmysql':
+            case 'irdsmariadb':
                 return <FunctionViewUsageByLocationRdsMariaDbAws />
             default:
                 return null
