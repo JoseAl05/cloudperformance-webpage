@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { FunctionViewUsageEc2OpenClosedHoursAws } from './FunctionViewUsageEc2OpenClosedHoursAws';
 import { FunctionViewUsageRdsPgOpenClosedHoursAws } from './FunctionViewUsageRdsPgOpenClosedHoursAws';
 import { FunctionViewUsageRdsMysqlOpenClosedHoursAws } from './FunctionViewUsageRdsMysqlOpenClosedHoursAws';
-import { FunctionViewUsageByLocationRdsSqlServerAws } from './FunctionViewUsageByLocationRdsSqlServerAws';
-import { FunctionViewUsageByLocationRdsMariaDbAws } from './FunctionViewUsageByLocationRdsMariaDbAws';
+import { FunctionViewUsageRdsSqlServerOpenClosedHoursAws } from './FunctionViewUsageRdsSqlServerOpenClosedHoursAws';
+import { FunctionViewUsageRdsMariaDbOpenClosedHoursAws } from './FunctionViewUsageRdsMariaDbOpenClosedHoursAws';
 
 export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('iec2');
@@ -26,9 +26,9 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
             case 'irdsmysql':
                 return <FunctionViewUsageRdsMysqlOpenClosedHoursAws />
             case 'irdssqlserver':
-                return <FunctionViewUsageByLocationRdsSqlServerAws />
+                return <FunctionViewUsageRdsSqlServerOpenClosedHoursAws />
             case 'irdsmariadb':
-                return <FunctionViewUsageByLocationRdsMariaDbAws />
+                return <FunctionViewUsageRdsMariaDbOpenClosedHoursAws />
             default:
                 return null
         }
