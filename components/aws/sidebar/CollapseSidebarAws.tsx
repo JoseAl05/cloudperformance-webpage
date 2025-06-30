@@ -147,6 +147,18 @@ export const CollapseSidebarAWS = () => {
           href: '/aws/recursos/instancias-rds-mysql',
           color: 'text-orange-600',
         },
+        {
+          label: 'Instancias RDS SQL Server',
+          icon: HardDrive,
+          href: '/aws/recursos/instancias-rds-sqlserver',
+          color: 'text-orange-600',
+        },
+        {
+          label: 'Instancias RDS MariaDB',
+          icon: HardDrive,
+          href: '/aws/recursos/instancias-rds-mariadb',
+          color: 'text-orange-600',
+        },
         // {
         //   label: 'Nodos K8S',
         //   icon: Server,
