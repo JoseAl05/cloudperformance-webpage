@@ -19,6 +19,7 @@ import {
   // Table2,
   HardDrive,
   Grid2X2,
+  PieChart,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -101,13 +102,13 @@ export const CollapseSidebarAWS = () => {
       tooltip: 'Vista Consumos',
       color: 'text-green-600',
     },
-    // {
-    //   label: 'Quotas',
-    //   icon: PieChart,
-    //   href: '/aws/quotas',
-    //   tooltip: 'Vista Quotas',
-    //   color: 'text-violet-500',
-    // },
+    {
+      label: 'Quotas',
+      icon: PieChart,
+      href: '/aws/quotas',
+      tooltip: 'Vista Quotas',
+      color: 'text-violet-500',
+    },
     {
       label: 'Deployments',
       icon: Zap,
