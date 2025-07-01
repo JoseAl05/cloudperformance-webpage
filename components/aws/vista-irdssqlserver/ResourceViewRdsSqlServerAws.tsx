@@ -58,7 +58,7 @@ export const ResourceViewRdsSqlServerAws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
-                                title="Cloudperformance2.0"
+                                title="CloudPerformance-AWS"
                                 width="1280"
                                 height="2100"
                                 src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=a8586f8457ae59b66141"
