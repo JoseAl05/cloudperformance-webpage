@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Eye, EyeOff, Lock, User, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const LoginForm = () => {
   const handleLogin = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simular llamada a API
     setTimeout(() => {
       setIsLoading(false);
@@ -36,7 +37,7 @@ const LoginForm = () => {
   const handleTwoFactorSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simular verificación 2FA
     setTimeout(() => {
       setIsLoading(false);
@@ -104,9 +105,9 @@ const LoginForm = () => {
         <div className="text-center mb-8">
           {/* Logo personalizado */}
           <div className="mx-auto h-16 w-16 mb-4">
-            <img 
-              src="/cloudperformance-logo.png" 
-              alt="CloudPerformance Logo" 
+            <Image
+              src="/cloudperformance-logo.png"
+              alt="CloudPerformance Logo"
               className="w-full h-full object-contain"
             />
           </div>
