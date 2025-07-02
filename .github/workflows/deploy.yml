@@ -20,8 +20,13 @@ jobs:
           ssh-keyscan -p 2243 mmontt.ddns.net >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
-        run: |
-          ssh -tt -i ~/.ssh/id_ed25519 desarrollo@mmontt.ddns.net -p 2243 << 'EOF'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2243
+          script: |
             set -ex
             cd /opt/cloudperformance-webpage
             sudo git pull origin main
