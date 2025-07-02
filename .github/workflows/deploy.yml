@@ -22,9 +22,11 @@ jobs:
       - name: Deploy via SSH
         run: |
           ssh -tt -i ~/.ssh/id_ed25519 desarrollo@mmontt.ddns.net -p 2243 << 'EOF'
+            set -ex
             cd /opt/cloudperformance-webpage
             sudo git pull origin main
             sudo npm install
             sudo npm run build
+            echo "Build exit status: $?"
             pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
           EOF
