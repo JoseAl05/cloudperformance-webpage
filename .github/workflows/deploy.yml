@@ -26,5 +26,5 @@ jobs:
             sudo git pull origin main
             sudo npm install
             sudo npm run build
-            sudo pm2 restart nextjs-app || sudo pm2 start npm --name "nextjs-app" -- start
+            pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
           EOF
