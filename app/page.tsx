@@ -41,6 +41,7 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, Cloud, BarChart3, Shield, Zap, Users, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,7 +68,7 @@ const LandingPage = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
               <div className="h-10 w-10">
-                <img 
+                <Image
                   src="/cloudperformance-logo.png" 
                   alt="CloudPerformance Logo" 
                   className="w-full h-full object-contain"
@@ -325,7 +326,7 @@ const LandingPage = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <div className="h-8 w-8">
-                <img 
+                <Image
                   src="/cloudperformance-logo.png" 
                   alt="CloudPerformance Logo" 
                   className="w-full h-full object-contain"

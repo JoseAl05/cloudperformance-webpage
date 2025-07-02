@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 // Iconos SVG simples
 const EyeIcon = () => (
@@ -63,6 +64,7 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Error de conexión. Inténtalo de nuevo.')
+      console.log(err.message);
     } finally {
       setIsLoading(false)
     }
@@ -74,7 +76,7 @@ export default function LoginPage() {
         {/* Logo y título */}
         <div className="text-center mb-8">
           <div className="mx-auto h-16 w-16 mb-4">
-            <img 
+            <Image
               src="/cloudperformance-logo.png" 
               alt="CloudPerformance Logo" 
               className="w-full h-full object-contain rounded-full"
