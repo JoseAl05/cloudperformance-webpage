@@ -58,7 +58,7 @@ export const MainViewPayGTrend = () => {
                         </div>
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
-                            <iframe title="Cloudperformance2.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=07da3c9ce4a04eb45d08" className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]' style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true}></iframe>
+                            <iframe title="Cloudperformance3.0" width="1280" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=77261035a6de8b35b3b6" className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]' style={{ clipPath: "inset(0px 0px 53px 0px)" }} frameBorder="0" allowFullScreen={true}></iframe>
                         </div>
 
                     )}

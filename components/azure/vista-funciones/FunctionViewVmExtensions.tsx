@@ -60,7 +60,7 @@ export const FunctionViewVmExtensions = () => {
                                 title='Cloudperformance2.0'
                                 width='1280'
                                 height='720'
-                                src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=e37c4a120e60b8b537e0'
+                                src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=e6434c95915d7e24f676'
                                 className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'

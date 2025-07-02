@@ -65,7 +65,7 @@ export const FunctionViewBlobStorage = () => {
                     title='Cloudperformance - Vista General'
                     width='1280'
                     height='850'
-                    src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fbf0464c23583ce87060'
+                    src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=10f6c43e328a758963f2'
                     className='w-full h-[600px] sm:h-[700px] md:h-[900px]'
                     style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                     frameBorder='0'
@@ -80,7 +80,7 @@ export const FunctionViewBlobStorage = () => {
                     title='Cloudperformance - Vista Detallada'
                     width='1280'
                     height='2450'
-                    src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=92a89cfa772bf8ed3902'
+                    src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=ae7f08731b6c59672bde'
                     className='w-full h-[1200px] sm:h-[1800px] md:h-[2600px]'
                     style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                     frameBorder='0'

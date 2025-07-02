@@ -44,10 +44,10 @@ export const MainViewConsume = () => {
       case 'maquinasvirtuales':
         return (
           <iframe
-            title='Cloudperformance2.0'
+            title='Cloudperformance3.0'
             width='1280'
             height='720'
-            src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=97ff25681034e4ee2078'
+            src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=04aaf0092b524fcf2d8b'
             className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'
@@ -57,10 +57,10 @@ export const MainViewConsume = () => {
       case 'basesdedatos':
         return (
           <iframe
-            title='Cloudperformance2.0'
+            title='Cloudperformance3.0'
             width='1280'
             height='720'
-            src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=8b5e438e3e249625e92c'
+            src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=3ba443ee05d85824a741'
             className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'
@@ -70,10 +70,10 @@ export const MainViewConsume = () => {
       case 'nodos':
         return (
           <iframe
-            title='Cloudperformance2.0'
+            title='Cloudperformance3.0'
             width='1280'
             height='720'
-            src='https://app.powerbi.com/view?r=eyJrIjoiZTNjOGY4MjYtYjc1Ni00MDNkLTg1ZTMtY2ExMWIyNmU0NTMwIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=fccf1ae01c449603b42c'
+            src='https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=41f09fa6da561b54f11a'
             className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
             style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
             frameBorder='0'

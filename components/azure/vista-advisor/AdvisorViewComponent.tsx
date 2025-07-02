@@ -61,7 +61,7 @@ export const AdvisorViewComponent = () => {
                                 title="Vista Asesor Azure"
                                 width="1280"
                                 height="720"
-                                src="https://app.powerbi.com/view?r=eyJrIjoiYmFmOTc1YWYtMTQ4Yi00ODdlLTljODQtYzZmNDM0MDk5NjQyIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4c51adbf38190d1e7e76"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiZGJmMjBlZWQtOGVhNC00YmZhLTliNjktZjU1MmU2YzNmOGVhIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=ac0d1e84b840e545a302"
                                 className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
