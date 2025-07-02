@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy via SSH
         run: |
-          ssh -i ~/.ssh/id_ed25519 desarrollo@mmontt.ddns.net -p 2243 << 'EOF'
+          ssh -tt -i ~/.ssh/id_ed25519 desarrollo@mmontt.ddns.net -p 2243 << 'EOF'
             cd /opt/cloudperformance-webpage
             sudo git pull origin main
             sudo npm install
