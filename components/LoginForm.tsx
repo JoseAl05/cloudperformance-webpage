@@ -48,7 +48,7 @@ export default function LoginPage() {
     e.preventDefault()
     setIsLoading(true)
     setError('')
-    
+
     try {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
@@ -62,9 +62,14 @@ export default function LoginPage() {
         const data = await res.json()
         setError(data.error || 'Error de inicio de sesión')
       }
-    } catch (err: any) {
-      setError('Error de conexión. Inténtalo de nuevo.')
-      console.log(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.log(err.message);
+        setError('Error de conexión. Inténtalo de nuevo.');
+      } else {
+        console.log('Error desconocido');
+        setError('Error desconocido');
+      }
     } finally {
       setIsLoading(false)
     }
@@ -77,17 +82,17 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div className="mx-auto h-16 w-16 mb-4">
             <Image
-              src="/cloudperformance-logo.png" 
-              alt="CloudPerformance Logo" 
+              src="/cloudperformance-logo.png"
+              alt="CloudPerformance Logo"
               className="w-full h-full object-contain rounded-full"
               onError={(e) => {
                 // Fallback a logo con iniciales si la imagen no carga
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <div 
-              className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl" 
-              style={{display: 'none'}}
+            <div
+              className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl"
+              style={{ display: 'none' }}
             >
               CP
             </div>
@@ -190,7 +195,7 @@ export default function LoginPage() {
             )}
           </button>
         </form>
-        
+
         {/* Footer */}
         <div className="mt-8 pt-6 border-t border-gray-100 text-center">
           <p className="text-xs text-gray-500">
