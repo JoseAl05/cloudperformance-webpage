@@ -62,7 +62,7 @@ export default function LoginPage() {
         const data = await res.json()
         setError(data.error || 'Error de inicio de sesión')
       }
-    } catch (err) {
+    } catch (err: any) {
       setError('Error de conexión. Inténtalo de nuevo.')
       console.log(err.message);
     } finally {
