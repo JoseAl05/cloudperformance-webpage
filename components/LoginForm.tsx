@@ -97,7 +97,7 @@ export default function LoginPage() {
               CP
             </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">CloudPerformance</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Cloud Performance</h2>
           <p className="text-gray-500 text-sm">Inicia sesión en tu cuenta</p>
         </div>
 
