@@ -27,7 +27,7 @@ jobs:
             sudo git pull origin main
             sudo npm install
             sudo rm -rfd ./.next
-            sudo npm run build
+            sudo stdbuf -oL npm run build
             echo "Build exit status: $?"
             pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
           EOF
