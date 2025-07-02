@@ -57,7 +57,7 @@ export default function LoginPage() {
       })
 
       if (res.ok) {
-        router.push('/verify')
+        router.push('/login/verify')
       } else {
         const data = await res.json()
         setError(data.error || 'Error de inicio de sesión')
