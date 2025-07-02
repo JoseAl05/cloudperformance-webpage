@@ -1,11 +1,16 @@
  import { MongoClient } from 'mongodb' 
 
-const uri = process.env.MONGODB_URI as string
-const options = {}
-let client: MongoClient
+const uri = process.env.MONGODB_URI as string;
+const options = {};
+let client: MongoClient | null = null;
+let clientPromise: Promise<MongoClient> | null = null;
 
-export async function getClient() {
-  if (!client) client = new MongoClient(uri, options)
-  if (!client.topology?.isConnected()) await client.connect()
-  return client
+export function getClient(): Promise<MongoClient> {
+  if (client) {
+    return clientPromise!; 
+  }
+
+  client = new MongoClient(uri, options);
+  clientPromise = client.connect();
+  return clientPromise;
 }

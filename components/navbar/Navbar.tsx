@@ -22,7 +22,7 @@ const montserrat = Montserrat({ weight: "600", subsets: ["latin"] })
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const pathname = usePathname();
+    const pathname = usePathname() ?? '';
     const { theme } = useTheme()
 
     useEffect(() => {

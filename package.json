@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 5000",
-    "build": "next build -d --experimental-debug-memory-usage",
+    "build": "next build -d",
     "start": "next start -p 4000",
     "lint": "next lint"
   },
