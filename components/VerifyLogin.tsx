@@ -15,7 +15,7 @@ export const VerifyLogin = () => {
       body: JSON.stringify({ otp }),
     })
     if (res.ok) {
-      router.push('/success')
+      router.push('/home')
     } else {
       const data = await res.json()
       setError(data.error || 'Código inválido.')
