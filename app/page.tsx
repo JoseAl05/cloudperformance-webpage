@@ -23,7 +23,7 @@ export default function Home() {
               className="rounded-lg shadow-md"
             />
           <h1 className="text-4xl font-bold text-gray-800 mt-4">
-            Cloud Performance - Prueba Workflow Github asdasd
+            Cloud Performance - Prueba Workflow Github 2
           </h1>
           <Link href='/azure/main-view' className='bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition-all'>
             Dashboards Azure
