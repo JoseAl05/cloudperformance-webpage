@@ -65,7 +65,7 @@ export const Navbar = () => {
         <div className='fixed z-50 w-full bg-white shadow-md dark:bg-slate-900'>
             <nav className='hidden justify-between items-center max-w-[1600px] md:flex md:flex-col md:mr-24 lg:flex-row lg:pl-12'>
                 <div className='h-24 flex justify-center items-center gap-2 lg:gap-4'>
-                    <Link href="/" className="flex items-center gap-3">
+                    <Link href="/home" className="flex items-center gap-3">
                         <div className="relative w-20 h-20 flex-shrink-0">
                             <Image width={100} height={100} alt="Logo Cloud Performance" src="/logo.png" className="object-contain" />
                         </div>
