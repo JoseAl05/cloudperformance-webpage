@@ -82,6 +82,8 @@ const CloudSelector = () => {
             <Image
               src="/cloudperformance-logo.png" 
               alt="CloudPerformance Logo" 
+              width={150} 
+              height={50} 
               className="w-full h-full object-contain"
             />
           </div>
