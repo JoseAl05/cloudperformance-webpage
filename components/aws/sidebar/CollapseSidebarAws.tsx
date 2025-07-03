@@ -137,6 +137,12 @@ export const CollapseSidebarAWS = () => {
           color: 'text-orange-500',
         },
         {
+          label: 'Autoscaling Groups',
+          icon: Server,
+          href: '/aws/recursos/autoscaling-groups',
+          color: 'text-orange-500',
+        },
+        {
           label: 'Instancias RDS Postgresql',
           icon: HardDrive,
           href: '/aws/recursos/instancias-rds-pg',
