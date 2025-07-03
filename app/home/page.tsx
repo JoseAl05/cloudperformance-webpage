@@ -49,6 +49,7 @@ import React, { useState } from 'react';
 import { ChevronRight, Cloud, Shield, BarChart3, Users, LogOut } from 'lucide-react';
 import Link from 'next/link'
 import LogoutButton from '@/components/LogoutButton';
+import Image from 'next/image'
 
 const CloudSelector = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
@@ -78,7 +79,7 @@ const CloudSelector = () => {
       <header className="relative z-10 flex justify-between items-center p-6">
         <div className="flex items-center space-x-3">
           <div className="h-10 w-10">
-            <img 
+            <Image
               src="/cloudperformance-logo.png" 
               alt="CloudPerformance Logo" 
               className="w-full h-full object-contain"
