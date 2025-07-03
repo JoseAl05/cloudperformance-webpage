@@ -22,7 +22,7 @@ export const ConsumeViewEc2InstancesAws = () => {
                                 <Computer className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Instancias EC2 no utilizadas con recursos asignados
+                                Consumo / No Consumo Instancias EC2
                             </h2>
                         </div>
                         <button
