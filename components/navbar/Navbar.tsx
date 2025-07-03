@@ -11,6 +11,8 @@ import { Montserrat } from "next/font/google";
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { ModeToggle } from './TogglerMode';
+import LogoutButton from '@/components/LogoutButton'
+
 
 interface NavLink {
     name: string;
@@ -115,6 +117,7 @@ export const Navbar = () => {
                         <Settings2 size={20} />
                     </div>
                     <ModeToggle />
+                    <LogoutButton /> {/* 👈 Aquí */}
                 </div>
             </nav>
             {/* Mobile Navigation */}

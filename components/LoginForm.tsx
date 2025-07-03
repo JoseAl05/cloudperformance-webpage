@@ -56,24 +56,31 @@ export default function LoginPage() {
         body: JSON.stringify({ email, password, rememberMe }),
       })
 
-      if (res.ok) {
-        router.push('/login/verify')
+      console.log('Respuesta status:', res.status)
+
+      const data = await res.json()
+      console.log('Respuesta JSON:', data)
+
+      if (res.ok && data.requires2FA) {
+        console.log('Redirigiendo a /login/verify')
+        await router.push('/login/verify')
       } else {
-        const data = await res.json()
         setError(data.error || 'Error de inicio de sesión')
       }
     } catch (err: unknown) {
       if (err instanceof Error) {
-        console.log(err.message);
-        setError('Error de conexión. Inténtalo de nuevo.');
+        console.log('Error catch:', err.message)
+        setError('Error de conexión. Inténtalo de nuevo.')
       } else {
-        console.log('Error desconocido');
-        setError('Error desconocido');
+        console.log('Error desconocido')
+        setError('Error desconocido')
       }
     } finally {
       setIsLoading(false)
     }
   }
+
+
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center min-h-screen p-4">
@@ -84,6 +91,8 @@ export default function LoginPage() {
             <Image
               src="/cloudperformance-logo.png"
               alt="CloudPerformance Logo"
+              width={200} // ajusta a tus necesidades
+              height={100}
               className="w-full h-full object-contain rounded-full"
               onError={(e) => {
                 // Fallback a logo con iniciales si la imagen no carga
@@ -160,17 +169,8 @@ export default function LoginPage() {
             </div>
           </div>
 
-          {/* Recordarme y olvidé contraseña */}
+          {/* Olvidé contraseña */}
           <div className="flex items-center justify-between">
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                className="h-4 w-4 text-cyan-500 focus:ring-cyan-500 border-gray-300 rounded"
-              />
-              <span className="ml-2 text-sm text-gray-600">Recordarme</span>
-            </label>
             <button
               type="button"
               className="text-sm text-cyan-600 hover:text-cyan-700 font-medium"

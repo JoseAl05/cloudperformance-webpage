@@ -71,6 +71,8 @@ const LandingPage = () => {
                 <Image
                   src="/cloudperformance-logo.png" 
                   alt="CloudPerformance Logo" 
+                  width={200}
+                  height={100}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -329,6 +331,8 @@ const LandingPage = () => {
                 <Image
                   src="/cloudperformance-logo.png" 
                   alt="CloudPerformance Logo" 
+                  width={200}
+                  height={100}
                   className="w-full h-full object-contain"
                 />
               </div>

@@ -13,6 +13,7 @@ export const VerifyLogin = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ otp }),
+      credentials: 'include', // Enviar cookies con la solicitud
     })
     if (res.ok) {
       router.push('/home')
