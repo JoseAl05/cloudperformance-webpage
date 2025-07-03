@@ -7,12 +7,14 @@ import { ConsumeViewRdsPostgresqlAws } from "./ConsumeViewRdsPostgresqlAws"
 import { ConsumeViewRdsMysqlAws } from "./ConsumeViewRdsMysqlAws"
 import { ConsumeViewRdsMariadbAws } from "./ConsumeViewRdsMariadbAws"
 import { ConsumeViewRdsSqlServerAws } from "./ConsumeViewRdsSqlServerAws"
+import { ConsumeViewEc2AutoscalingAws } from './ConsumeViewEc2AutoscalingAws'
 
 export const ConsumeViewCategorySelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState("iec2")
 
     const services = [
         { value: "iec2", label: "Instancias EC2", icon: <Computer className="mr-2 h-5 w-5" /> },
+        { value: "asgiec2", label: "Instancias EC2 de Autoscaling Groups", icon: <Computer className="mr-2 h-5 w-5" /> },
         { value: "irdspg", label: "Instancias RDS PostgreSQL", icon: <Database className="mr-2 h-5 w-5" /> },
         { value: "irdsmysql", label: "Instancias RDS Mysql", icon: <Database className="mr-2 h-5 w-5" /> },
         { value: "irdsmariadb", label: "Instancias RDS MariaDB", icon: <Database className="mr-2 h-5 w-5" /> },
@@ -23,6 +25,8 @@ export const ConsumeViewCategorySelectionAws = () => {
         switch (selectedCategory) {
             case "iec2":
                 return <ConsumeViewEc2InstancesAws />
+            case "asgiec2":
+                return <ConsumeViewEc2AutoscalingAws />
             case "irdspg":
                 return <ConsumeViewRdsPostgresqlAws />
             case "irdsmysql":
