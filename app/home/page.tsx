@@ -46,7 +46,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronRight, Cloud, Shield, BarChart3, Users, LogOut } from 'lucide-react';
+import { ChevronRight, Cloud, Shield, BarChart3} from 'lucide-react';
 import Link from 'next/link'
 import LogoutButton from '@/components/LogoutButton';
 import Image from 'next/image'
@@ -60,12 +60,12 @@ const CloudSelector = () => {
     // window.location.href = `/dashboard/${provider.toLowerCase()}`;
   };
 
-  const handleLogout = () => {
-    // Lógica de logout
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('user');
-    window.location.href = '/';
-  };
+  // const handleLogout = () => {
+  //   // Lógica de logout
+  //   localStorage.removeItem('authToken');
+  //   localStorage.removeItem('user');
+  //   window.location.href = '/';
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
