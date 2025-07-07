@@ -20,6 +20,7 @@ import {
   HardDrive,
   Grid2X2,
   PieChart,
+  Layers,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -166,12 +167,12 @@ export const CollapseSidebarAWS = () => {
           href: '/aws/recursos/instancias-rds-mariadb',
           color: 'text-orange-600',
         },
-        // {
-        //   label: 'Nodos K8S',
-        //   icon: Server,
-        //   href: '/recursos/nodos',
-        //   color: 'text-orange-700',
-        // },
+        {
+          label: 'Clusters EKS',
+          icon: Layers,
+          href: '/aws/recursos/clusters-eks',
+          color: 'text-orange-700',
+        },
       ],
     }
   ]
@@ -251,8 +252,8 @@ export const CollapseSidebarAWS = () => {
                           </div>
                           <div
                             className={cn(
-                              'pl-10 pr-2 py-1 space-y-1 overflow-hidden transition-all duration-200',
-                              openDropdowns[route.label] ? 'max-h-96' : 'max-h-0',
+                              'pl-10 pr-2 py-2 mb-5 space-y-1 overflow-hidden transition-all duration-200',
+                              openDropdowns[route.label] ? 'h-full' : 'max-h-0',
                             )}
                           >
                             {route.subItems?.map((subItem) => (
@@ -309,7 +310,7 @@ export const CollapseSidebarAWS = () => {
                             <div
                               onClick={(e) => toggleDropdown(route.label, e)}
                               className={cn(
-                                'flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 cursor-pointer',
+                                'flex items-center justify-center w-10 h-full rounded-xl transition-all duration-200 cursor-pointer',
                                 openDropdowns[route.label]
                                   ? theme === 'dark'
                                     ? 'bg-slate-800 text-white'
