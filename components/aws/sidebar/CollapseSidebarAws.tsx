@@ -14,13 +14,13 @@ import {
   LineChart,
   ChevronRight,
   ChevronDown,
-  Server,
   // HardDrive,
   // Table2,
-  HardDrive,
   Grid2X2,
   PieChart,
   Layers,
+  Computer,
+  Database,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -133,37 +133,37 @@ export const CollapseSidebarAWS = () => {
       subItems: [
         {
           label: 'Instancias EC2',
-          icon: Server,
+          icon: Computer,
           href: '/aws/recursos/instancias-ec2',
           color: 'text-orange-500',
         },
         {
           label: 'Autoscaling Groups',
-          icon: Server,
+          icon: Computer,
           href: '/aws/recursos/autoscaling-groups',
           color: 'text-orange-500',
         },
         {
           label: 'Instancias RDS Postgresql',
-          icon: HardDrive,
+          icon: Database,
           href: '/aws/recursos/instancias-rds-pg',
           color: 'text-orange-600',
         },
         {
           label: 'Instancias RDS Mysql',
-          icon: HardDrive,
+          icon: Database,
           href: '/aws/recursos/instancias-rds-mysql',
           color: 'text-orange-600',
         },
         {
           label: 'Instancias RDS SQL Server',
-          icon: HardDrive,
+          icon: Database,
           href: '/aws/recursos/instancias-rds-sqlserver',
           color: 'text-orange-600',
         },
         {
           label: 'Instancias RDS MariaDB',
-          icon: HardDrive,
+          icon: Database,
           href: '/aws/recursos/instancias-rds-mariadb',
           color: 'text-orange-600',
         },
