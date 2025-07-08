@@ -1,6 +1,6 @@
 'use client'
 
-import { Grid2X2, Info } from 'lucide-react'
+import { Database, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export const ResourceViewRdsMysqlAws = () => {
@@ -21,7 +21,7 @@ export const ResourceViewRdsMysqlAws = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <Grid2X2 className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <Database className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
                                 Vista Instancias RDS Mysql

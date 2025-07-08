@@ -1,6 +1,6 @@
 'use client'
 
-import { ChartColumnBig, Info } from 'lucide-react'
+import { AlarmClock, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export const FunctionViewUsageRdsMariaDbOpenClosedHoursAws = () => {
@@ -22,7 +22,7 @@ export const FunctionViewUsageRdsMariaDbOpenClosedHoursAws = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ChartColumnBig className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <AlarmClock className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
                                 Análisis consumo Instancias RDS MariaDB horario Hábil y No Hábil
