@@ -3,7 +3,7 @@ import { useState, useEffect, JSX } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 
-import { AlarmClock, ArrowDownWideNarrow, Computer, Database, HardDrive } from 'lucide-react'
+import { AlarmClock, ArrowDownWideNarrow, ChartColumnBig, Computer, Database, HardDrive, TrendingUpDown } from 'lucide-react'
 import { FunctionViewUsageByLocationSelectionAws } from './FunctionViewUsageByLocationSelectionAws'
 import { FunctionViewUsageOpenClosedHoursSelectionAws } from './FunctionViewUsageOpenClosedHoursSelectionAws'
 import { FunctionViewSpotVmAws } from './FunctionViewSpotVmAws'
@@ -11,6 +11,9 @@ import { FunctionViewEc2UnusedWithResources } from './FunctionViewEc2UnusedWithR
 import { FunctionViewEbsVolumesUnusedAws } from './FunctionViewEbsVolumesUnusedAws'
 import { FunctionViewTopS3BucketsAws } from './FunctionViewTopS3BucketsAws'
 import { FunctionViewTopResourcesByCategorySelectionAws } from './FunctionViewTopResourcesByCategorySelectionAws'
+import { FunctionViewEc2AsgUnusedWithResources } from './FunctionViewEc2AsgUnusedWithResources'
+import { FunctionViewResourceUsageVariationAws } from './FunctionViewResourceUsageVariationAws'
+import { FunctionViewEc2EksUnusedWithResources } from './FunctionViewEc2EksUnusedWithResources'
 
 
 export const FunctionViewComponentsAws = () => {
@@ -21,7 +24,7 @@ export const FunctionViewComponentsAws = () => {
     {
       value: 'usagebylocation',
       label: 'Volumen Total de Uso por Localización',
-      icon: <Database className='mr-2 h-5 w-5' />
+      icon: <ChartColumnBig className='mr-2 h-5 w-5' />
     },
     {
       value: 'usageopenclosedhours',
@@ -37,6 +40,21 @@ export const FunctionViewComponentsAws = () => {
       value: 'ec2unusedwithresources',
       label: 'Instancias EC2 no utilizadas con recursos asignados',
       icon: <Computer className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'ec2asgunusedwithresources',
+      label: 'Instancias EC2 que pertenecen a Autoscaling Groups no utilizadas con recursos asignados',
+      icon: <Computer className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'ec2eksunusedwithresources',
+      label: 'Instancias EC2 Nodos EKS no utilizadas con recursos asignados',
+      icon: <Computer className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'resourceusagevariation',
+      label: 'Variación Tendencia Uso de Recursos',
+      icon: <TrendingUpDown className='mr-2 h-5 w-5' />,
     },
     {
       value: 'ebsvolumesunused',
@@ -74,6 +92,9 @@ export const FunctionViewComponentsAws = () => {
     usageopenclosedhours: <FunctionViewUsageOpenClosedHoursSelectionAws />,
     spotec2vsec2: <FunctionViewSpotVmAws/>,
     ec2unusedwithresources: <FunctionViewEc2UnusedWithResources/>,
+    ec2asgunusedwithresources: <FunctionViewEc2AsgUnusedWithResources />,
+    ec2eksunusedwithresources: <FunctionViewEc2EksUnusedWithResources />,
+    resourceusagevariation: <FunctionViewResourceUsageVariationAws />,
     ebsvolumesunused: <FunctionViewEbsVolumesUnusedAws />,
     tops3buckets: <FunctionViewTopS3BucketsAws />,
     topresources: <FunctionViewTopResourcesByCategorySelectionAws />

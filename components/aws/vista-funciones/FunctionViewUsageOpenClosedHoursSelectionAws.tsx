@@ -6,11 +6,15 @@ import { FunctionViewUsageRdsPgOpenClosedHoursAws } from './FunctionViewUsageRds
 import { FunctionViewUsageRdsMysqlOpenClosedHoursAws } from './FunctionViewUsageRdsMysqlOpenClosedHoursAws';
 import { FunctionViewUsageRdsSqlServerOpenClosedHoursAws } from './FunctionViewUsageRdsSqlServerOpenClosedHoursAws';
 import { FunctionViewUsageRdsMariaDbOpenClosedHoursAws } from './FunctionViewUsageRdsMariaDbOpenClosedHoursAws';
+import { FunctionViewUsageEc2AsgOpenClosedHoursAws } from './FunctionViewUsageEc2AsgOpenClosedHoursAws';
+import { FunctionViewUsageEc2EksOpenClosedHoursAws } from './FunctionViewUsageEc2EksOpenClosedHoursAws';
 
 export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('iec2');
     const services = [
         { value: 'iec2', label: 'Instancias EC2', icon: <Computer className='mr-2 h-5 w-5' /> },
+        { value: 'asgiec2', label: 'Instancias EC2 de Autoscaling Groups', icon: <Computer className='mr-2 h-5 w-5' /> },
+        { value: 'eksiec2', label: 'Instancias EC2 Nodos EKS', icon: <Computer className='mr-2 h-5 w-5' /> },
         { value: 'irdspg', label: 'Instancias RDS PostgreSQL', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdsmysql', label: 'Instancias RDS Mysql', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdssqlserver', label: 'Instancias RDS Sql Server', icon: <Database className='mr-2 h-5 w-5' /> },
@@ -21,6 +25,10 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
         switch (selectedCategory) {
             case 'iec2':
                 return <FunctionViewUsageEc2OpenClosedHoursAws />
+            case 'asgiec2':
+                return <FunctionViewUsageEc2AsgOpenClosedHoursAws />
+            case 'eksiec2':
+                return <FunctionViewUsageEc2EksOpenClosedHoursAws />
             case 'irdspg':
                 return <FunctionViewUsageRdsPgOpenClosedHoursAws />
             case 'irdsmysql':
