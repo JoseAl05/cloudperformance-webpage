@@ -17,19 +17,14 @@ import { FunctionViewEc2EksUnusedWithResources } from './FunctionViewEc2EksUnuse
 
 
 export const FunctionViewComponentsAws = () => {
-  const [selectedValue, setSelectedValue] = useState('usagebylocation');
+  const [selectedValue, setSelectedValue] = useState('tops3buckets');
   const [isLoading, setIsLoading] = useState(false)
 
   const categories = [
     {
-      value: 'usagebylocation',
-      label: 'Volumen Total de Uso por Localización',
-      icon: <ChartColumnBig className='mr-2 h-5 w-5' />
-    },
-    {
-      value: 'usageopenclosedhours',
-      label: 'Análisis consumo de VM horario Hábil y No Hábil',
-      icon: <AlarmClock className='mr-2 h-5 w-50' />
+      value: 'tops3buckets',
+      label: 'Top S3 Buckets',
+      icon: <Database className='mr-2 h-5 w-5' />,
     },
     {
       value: 'spotec2vsec2',
@@ -52,24 +47,29 @@ export const FunctionViewComponentsAws = () => {
       icon: <Computer className='mr-2 h-5 w-5' />,
     },
     {
-      value: 'resourceusagevariation',
-      label: 'Variación Tendencia Uso de Recursos',
-      icon: <TrendingUpDown className='mr-2 h-5 w-5' />,
-    },
-    {
       value: 'ebsvolumesunused',
       label: 'Volúmenes EBS No Utilizados',
       icon: <HardDrive className='mr-2 h-5 w-5' />,
     },
     {
-      value: 'tops3buckets',
-      label: 'Top S3 Buckets',
-      icon: <Database className='mr-2 h-5 w-5' />,
-    },
-    {
       value: 'topresources',
       label: 'Top Recursos por Categoría',
       icon: <ArrowDownWideNarrow className='mr-2 h-5 w-5' />
+    },
+    {
+      value: 'usagebylocation',
+      label: 'Volumen Total de Uso por Localización',
+      icon: <ChartColumnBig className='mr-2 h-5 w-5' />
+    },
+    {
+      value: 'resourceusagevariation',
+      label: 'Variación Tendencia Uso de Recursos',
+      icon: <TrendingUpDown className='mr-2 h-5 w-5' />,
+    },
+    {
+      value: 'usageopenclosedhours',
+      label: 'Análisis consumo de VM horario Hábil y No Hábil',
+      icon: <AlarmClock className='mr-2 h-5 w-50' />
     }
   ]
 
@@ -105,7 +105,7 @@ export const FunctionViewComponentsAws = () => {
   return (
     <div className='w-full max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-6'>
       <div className='w-full bg-white rounded-xl shadow-sm p-3 sm:p-6 border border-slate-200'>
-        <Select onValueChange={handleFunctionsChange} defaultValue='usagebylocation'>
+        <Select onValueChange={handleFunctionsChange} defaultValue='tops3buckets'>
           <SelectTrigger
             className={cn(
               'text-base sm:text-lg font-medium py-3 sm:py-6 px-3 sm:px-4 border border-slate-300 rounded-lg shadow-sm',
