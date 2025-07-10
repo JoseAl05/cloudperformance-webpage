@@ -58,7 +58,7 @@ export const FunctionViewResourceUsageVariationAws = () => {
                                 width='1280'
                                 height='720'
                                 src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4b95ef4b220003020a7c"
-                                className='w-full max-w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
+                                className='w-full max-w-full h-[80vh] sm:h-[90vh] md:h-[150vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
