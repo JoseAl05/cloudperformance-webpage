@@ -58,7 +58,7 @@ export const ConsumeViewRdsMysqlAws = () => {
                                 width='1280'
                                 height='720'
                                 src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=20d1d696a3ecf2bb911b"
-                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
+                                className='w-full h-[190vh] sm:h-[200vh] md:h-[260vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}

@@ -62,7 +62,7 @@ export const ResourceViewRdsPgAws = () => {
                                 width="1280"
                                 height="2100"
                                 src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=0c469e6b0ae6d224cdaa"
-                                className='w-full h-[1280px] sm:h-[1800px] md:h-[2300px]'
+                                className='w-full h-[330vh] sm:h-[340vh] md:h-[400vh]'
                                 style={{ clipPath: "inset(0px 0px 53px 0px)" }}
                                 frameBorder="0"
                                 allowFullScreen={true}

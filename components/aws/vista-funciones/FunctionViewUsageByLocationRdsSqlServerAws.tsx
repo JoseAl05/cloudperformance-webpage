@@ -63,7 +63,7 @@ export const FunctionViewUsageByLocationRdsSqlServerAws = () => {
                                 width='1280'
                                 height='720'
                                 src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=21f276cd784b04c75b1e"
-                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
+                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
