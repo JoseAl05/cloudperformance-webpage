@@ -58,6 +58,16 @@ export const ResourceViewAutoscalingAws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=ee28a3a5856b08b34856"
+                                className='w-full h-[300vh] sm:h-[320vh] md:h-[380vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width="1280"
                                 height="2100"
@@ -66,7 +76,7 @@ export const ResourceViewAutoscalingAws = () => {
                                 style={{ clipPath: "inset(0px 0px 53px 0px)" }}
                                 frameBorder="0"
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
 
                     )}

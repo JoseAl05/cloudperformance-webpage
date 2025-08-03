@@ -36,7 +36,7 @@ export const VerifyLogin = () => {
         {error && <div className="mb-4 text-red-600 font-medium">{error}</div>}
         <form onSubmit={handleSubmit} className="space-y-6">
           <input type="text" value={otp} onChange={e => setOtp(e.target.value)} maxLength={6} pattern="[0-9]{6}" required className="w-full px-4 py-3 text-center text-2xl font-mono bg-gray-100 border border-gray-300 rounded-xl" placeholder="000000" />
-          <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-xl font-medium">Verificar código</button>
+          <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-xl font-medium cursor-pointer">Verificar código</button>
         </form>
       </div>
     </div>

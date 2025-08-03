@@ -36,7 +36,7 @@ export const FunctionViewEc2UnusedWithResources = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra las Instancias EC2, que tienen una utilización de sus componentes de computo (CPU y Memoria) bajo un 10%. Aquí se mostraran los recursos asignados (Discos, Interfaces de Red, Ips Públicas, Cores de CPU, GB de Memoria, IOPS Soportados) a las máquinas que cumplan con la condicion anteriormente mencionada. También se mostrará el % Promedio Usado y No Usado de las métricas de CPU para las Instancias EC2.
+                                Esta visualización muestra las Instancias EC2, que tienen una utilización de créditos de CPU inferior al 10%, representado por el flag de Infrautilización. Si la instancia no pertenece a la serie Burstable, se considera como infrautilización, el % de CPU utilizado inferior al 10%. Aquí se mostraran los recursos asignados (Discos, Interfaces de Red, Ips Públicas, Cores de CPU, GB de Memoria, IOPS Soportados) a las máquinas que cumplan con la condicion anteriormente mencionada. También se mostrará el % Promedio Usado y No Usado de las métricas de CPU para las Instancias EC2.
                             </p>
                         </div>
                     )}
@@ -54,6 +54,16 @@ export const FunctionViewEc2UnusedWithResources = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=573e497e6a9b03365b6e"
+                                className='w-full h-[90vh] sm:h-[100vh] md:h-[160vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
@@ -62,7 +72,7 @@ export const FunctionViewEc2UnusedWithResources = () => {
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>

@@ -14,7 +14,7 @@ export const FunctionViewUsageByLocationSelectionAws = () => {
         { value: 'irdspg', label: 'Instancias RDS PostgreSQL', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdsmysql', label: 'Instancias RDS Mysql', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdssqlserver', label: 'Instancias RDS Sql Server', icon: <Database className='mr-2 h-5 w-5' /> },
-        { value: 'irdsmariadb', label: 'Instancias RDS MariaDB', icon: <Database className='mr-2 h-5 w-5' /> },
+        // { value: 'irdsmariadb', label: 'Instancias RDS MariaDB', icon: <Database className='mr-2 h-5 w-5' /> },
     ];
 
     const renderFunctionsIframe = () => {

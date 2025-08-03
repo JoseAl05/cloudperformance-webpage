@@ -15,13 +15,13 @@ export const FunctionViewTopResourcesByCategorySelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('amountresources');
     const categories = [
         { value: 'amountresources', label: 'Cantidad de Recursos', icon: <Cpu className='mr-2 h-5 w-5' /> },
-        { value: 'costbyregion', label: 'Dolares Facturados por Región', icon: <Globe2 className='mr-2 h-5 w-5' /> },
-        { value: 'costbyso', label: 'Dolares Facturados por Sistema Operativo', icon: <MonitorSmartphone className='mr-2 h-5 w-5' /> },
-        { value: 'costbyinstancetype', label: 'Dolares Facturados por Tipo de Instancia', icon: <ServerCog className='mr-2 h-5 w-5' /> },
-        { value: 'costbyinstancefamily', label: 'Dolares Facturados por Familia de Instancia', icon: <Layers3 className='mr-2 h-5 w-5' /> },
-        { value: 'costbypurchasemethod', label: 'Dolares Facturados por Tipo de Compra', icon: <ShoppingCart className='mr-2 h-5 w-5' /> },
-        { value: 'costbyrecordtype', label: 'Dolares Facturados por Tipo de Cobro', icon: <ReceiptText className='mr-2 h-5 w-5' /> },
-        { value: 'costbyresource', label: 'Dolares Facturados por Recurso', icon: <Layers className='mr-2 h-5 w-5' /> }
+        { value: 'costbyregion', label: 'Facturación por Región', icon: <Globe2 className='mr-2 h-5 w-5' /> },
+        { value: 'costbyso', label: 'Facturación por Sistema Operativo', icon: <MonitorSmartphone className='mr-2 h-5 w-5' /> },
+        { value: 'costbyinstancetype', label: 'Facturación por Tipo de Instancia', icon: <ServerCog className='mr-2 h-5 w-5' /> },
+        { value: 'costbyinstancefamily', label: 'Facturación por Familia de Instancia', icon: <Layers3 className='mr-2 h-5 w-5' /> },
+        { value: 'costbypurchasemethod', label: 'Facturación por Tipo de Compra', icon: <ShoppingCart className='mr-2 h-5 w-5' /> },
+        { value: 'costbyrecordtype', label: 'Facturación por Tipo de Cobro', icon: <ReceiptText className='mr-2 h-5 w-5' /> },
+        { value: 'costbyresource', label: 'Facturación por Recurso', icon: <Layers className='mr-2 h-5 w-5' /> }
     ];
 
     const renderFunctionsIframe = () => {

@@ -54,6 +54,16 @@ export const FunctionViewTopS3BucketsAws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=2e78faa548e0d775cc45"
+                                className='w-full h-[160vh] sm:h-[170vh] md:h-[230vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
@@ -62,7 +72,7 @@ export const FunctionViewTopS3BucketsAws = () => {
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>

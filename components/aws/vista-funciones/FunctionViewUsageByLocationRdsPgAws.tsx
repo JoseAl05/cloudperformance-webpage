@@ -40,7 +40,7 @@ export const FunctionViewUsageByLocationRdsPgAws = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                Esta visualización muestra el uso promedio de CPU, memoria e IOPS de las máquinas virtuales, agrupado por localización geográfica
+                                En construcción...
                             </p>
                         </div>
                     )}
@@ -59,6 +59,16 @@ export const FunctionViewUsageByLocationRdsPgAws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=753d7f14b33c525ea47c"
+                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
@@ -67,7 +77,7 @@ export const FunctionViewUsageByLocationRdsPgAws = () => {
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>
