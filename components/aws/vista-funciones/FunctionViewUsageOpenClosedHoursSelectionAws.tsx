@@ -14,11 +14,11 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
     const services = [
         { value: 'iec2', label: 'Instancias EC2', icon: <Computer className='mr-2 h-5 w-5' /> },
         { value: 'asgiec2', label: 'Instancias EC2 de Autoscaling Groups', icon: <Computer className='mr-2 h-5 w-5' /> },
-        { value: 'eksiec2', label: 'Instancias EC2 Nodos EKS', icon: <Computer className='mr-2 h-5 w-5' /> },
+        // { value: 'eksiec2', label: 'Instancias EC2 Nodos EKS', icon: <Computer className='mr-2 h-5 w-5' /> },
         { value: 'irdspg', label: 'Instancias RDS PostgreSQL', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdsmysql', label: 'Instancias RDS Mysql', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdssqlserver', label: 'Instancias RDS Sql Server', icon: <Database className='mr-2 h-5 w-5' /> },
-        { value: 'irdsmariadb', label: 'Instancias RDS MariaDB', icon: <Database className='mr-2 h-5 w-5' /> },
+        // { value: 'irdsmariadb', label: 'Instancias RDS MariaDB', icon: <Database className='mr-2 h-5 w-5' /> },
     ];
 
     const renderFunctionsIframe = () => {

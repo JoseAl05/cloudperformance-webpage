@@ -59,6 +59,16 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
+                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
@@ -67,7 +77,7 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>

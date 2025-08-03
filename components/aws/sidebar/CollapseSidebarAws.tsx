@@ -18,7 +18,7 @@ import {
   // Table2,
   Grid2X2,
   PieChart,
-  Layers,
+  // Layers,
   Computer,
   Database,
 } from 'lucide-react'
@@ -160,19 +160,19 @@ export const CollapseSidebarAWS = () => {
           icon: Database,
           href: '/aws/recursos/instancias-rds-sqlserver',
           color: 'text-orange-600',
-        },
-        {
-          label: 'Instancias RDS MariaDB',
-          icon: Database,
-          href: '/aws/recursos/instancias-rds-mariadb',
-          color: 'text-orange-600',
-        },
-        {
-          label: 'Clusters EKS',
-          icon: Layers,
-          href: '/aws/recursos/clusters-eks',
-          color: 'text-orange-700',
-        },
+        }
+        // {
+        //   label: 'Instancias RDS MariaDB',
+        //   icon: Database,
+        //   href: '/aws/recursos/instancias-rds-mariadb',
+        //   color: 'text-orange-600',
+        // },
+        // {
+        //   label: 'Clusters EKS',
+        //   icon: Layers,
+        //   href: '/aws/recursos/clusters-eks',
+        //   color: 'text-orange-700',
+        // },
       ],
     }
   ]

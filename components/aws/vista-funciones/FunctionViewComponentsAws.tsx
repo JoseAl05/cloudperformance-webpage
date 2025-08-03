@@ -41,11 +41,11 @@ export const FunctionViewComponentsAws = () => {
       label: 'Instancias EC2 que pertenecen a Autoscaling Groups no utilizadas con recursos asignados',
       icon: <Computer className='mr-2 h-5 w-5' />,
     },
-    {
-      value: 'ec2eksunusedwithresources',
-      label: 'Instancias EC2 Nodos EKS no utilizadas con recursos asignados',
-      icon: <Computer className='mr-2 h-5 w-5' />,
-    },
+    // {
+    //   value: 'ec2eksunusedwithresources',
+    //   label: 'Instancias EC2 Nodos EKS no utilizadas con recursos asignados',
+    //   icon: <Computer className='mr-2 h-5 w-5' />,
+    // },
     {
       value: 'ebsvolumesunused',
       label: 'Volúmenes EBS No Utilizados',

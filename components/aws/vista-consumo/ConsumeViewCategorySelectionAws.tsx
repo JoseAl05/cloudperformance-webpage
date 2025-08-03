@@ -18,9 +18,9 @@ export const ConsumeViewCategorySelectionAws = () => {
         { value: "asgiec2", label: "Instancias EC2 de Autoscaling Groups", icon: <Computer className="mr-2 h-5 w-5" /> },
         { value: "irdspg", label: "Instancias RDS PostgreSQL", icon: <Database className="mr-2 h-5 w-5" /> },
         { value: "irdsmysql", label: "Instancias RDS Mysql", icon: <Database className="mr-2 h-5 w-5" /> },
-        { value: "irdsmariadb", label: "Instancias RDS MariaDB", icon: <Database className="mr-2 h-5 w-5" /> },
+        // { value: "irdsmariadb", label: "Instancias RDS MariaDB", icon: <Database className="mr-2 h-5 w-5" /> },
         { value: "irdssqlserver", label: "Instancias RDS SQL Server", icon: <Database className="mr-2 h-5 w-5" /> },
-        { value: "eksnodes", label: "Nodos EKS", icon: <Computer className="mr-2 h-5 w-5" /> },
+        // { value: "eksnodes", label: "Nodos EKS", icon: <Computer className="mr-2 h-5 w-5" /> },
     ]
 
     const renderFunctionsIframe = () => {

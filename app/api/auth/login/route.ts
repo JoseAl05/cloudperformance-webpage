@@ -1,25 +1,38 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import { getClient } from '@/lib/mongo'
 import bcrypt from 'bcryptjs'
 import { transporter } from '@/lib/mail'
-import { serialize } from 'cookie'
+import { cookies } from 'next/headers'
+import jwt from 'jsonwebtoken'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end()
-
-  const { email, password } = req.body
+export async function POST(request: Request) {
+  const { email, password } = await request.json()
   const client = await getClient()
+  const cookieStore = await cookies();
+
   const user = await client.db('login_db').collection('users').findOne({ email })
 
   if (!user || !(await bcrypt.compare(password, user.password))) {
-    return res.status(401).json({ error: 'Credenciales inválidas' })
+    return Response.json({ error: 'Credenciales inválidas' }, { status: 401 })
   }
 
-  // Generar OTP
-  const otp = Math.floor(100000 + Math.random() * 900000).toString()
-  await client.db('login_db').collection('users').updateOne({ email }, { $set: { otp } })
+  const tokenPayload = {
+    userId: user._id.toString(),
+    is_aws: user.is_aws || false,
+    is_azure: user.is_azure || false,
+  }
 
-  // Enviar email con OTP
+  const jwtSecret = process.env.JWT_SECRET
+  if (!jwtSecret) {
+    console.error('Falta la variable de entorno JWT_SECRET')
+    return Response.json({ error: 'Error del servidor' }, { status: 500 })
+  }
+
+  const token = jwt.sign(tokenPayload, jwtSecret, { expiresIn: '1d' })
+
+  // Guardar OTP temporal para validación 2FA
+  const otp = Math.floor(100000 + Math.random() * 900000).toString()
+  await client.db('login_db').collection('users').updateOne({ email }, { $set: { otp, token } })
+
   await transporter.sendMail({
     from: process.env.MAIL_USER,
     to: email,
@@ -40,14 +53,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `,
   })
 
-  // Setear cookie temporal pre2fa para permitir acceso a /login/verify
-  res.setHeader('Set-Cookie', serialize('pre2fa', 'true', {
+  // Cookie temporal que habilita acceso a /login/verify
+  cookieStore.set('pre2fa', 'true', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
     path: '/',
-    maxAge: 5 * 60, // 5 minutos
-  }))
+    maxAge: 5 * 60,
+  })
 
-  return res.status(200).json({ requires2FA: true })
+  return Response.json({ requires2FA: true })
 }

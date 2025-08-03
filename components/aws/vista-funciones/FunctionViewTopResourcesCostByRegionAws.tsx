@@ -23,7 +23,7 @@ export const FunctionViewTopResourcesCostByRegionAws = () => {
                                 <Globe2 className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Top Dolares facturados por Región
+                                Facturación por Región
                             </h2>
                         </div>
                         <button
@@ -55,6 +55,16 @@ export const FunctionViewTopResourcesCostByRegionAws = () => {
                     ) : (
                         <div className='relative w-full rounded-lg overflow-hidden shadow-md border border-slate-200 transition-all duration-300'>
                             <iframe
+                                title="UC_Christus_CloudPerformance-AWS"
+                                width='1280'
+                                height='720'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=a3ffde5b8b4e349e1310"
+                                className='w-full h-[110vh] sm:h-[120vh] md:h-[180vh]'
+                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
+                                frameBorder='0'
+                                allowFullScreen={true}
+                            />
+                            {/* <iframe
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
@@ -63,7 +73,7 @@ export const FunctionViewTopResourcesCostByRegionAws = () => {
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>
