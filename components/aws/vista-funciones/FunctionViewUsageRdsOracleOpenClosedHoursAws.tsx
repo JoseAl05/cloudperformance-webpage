@@ -1,9 +1,9 @@
 'use client'
 
-import { ChartColumnBig, Info } from 'lucide-react'
+import { AlarmClock, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const FunctionViewUsageByLocationEc2Aws = () => {
+export const FunctionViewUsageRdsOracleOpenClosedHoursAws = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -22,10 +22,10 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ChartColumnBig className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <AlarmClock className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Volumen Total de Uso por Localización.
+                                Análisis consumo Instancias RDS Oracle horario Hábil y No Hábil
                             </h2>
                         </div>
                         <button
@@ -40,7 +40,7 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                En construcción...
+                                Esta visualización muestra el comportamiento de RDS Oracle en horario hábil (Lunes a Viernes desde 8:00 AM hasta 18:00 PM) y horario no hábil (Sabado y Domingo desde 18:00 PM hasta 8:00 AM).
                             </p>
                         </div>
                     )}
@@ -62,8 +62,8 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="UC_Christus_CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=336583a288518abeee77"
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
@@ -72,8 +72,8 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=2d378d7f2e7bd1085e89"
+                                className='w-full h-[50vh] sm:h-[60vh] md:h-[120vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}

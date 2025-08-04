@@ -3,7 +3,7 @@
 import { ChartColumnBig, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const FunctionViewUsageByLocationEc2Aws = () => {
+export const FunctionViewUsageByLocationRdsOracleAws = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -62,7 +62,7 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="UC_Christus_CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=046b24a5a7d0982c9703"
                                 className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
@@ -72,7 +72,7 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=21f276cd784b04c75b1e"
                                 className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'

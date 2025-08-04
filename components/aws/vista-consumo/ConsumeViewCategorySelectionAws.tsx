@@ -9,6 +9,7 @@ import { ConsumeViewRdsMariadbAws } from "./ConsumeViewRdsMariadbAws"
 import { ConsumeViewRdsSqlServerAws } from "./ConsumeViewRdsSqlServerAws"
 import { ConsumeViewEc2AutoscalingAws } from './ConsumeViewEc2AutoscalingAws'
 import { ConsumeViewNodesEksAws } from './ConsumeViewNodesEksAws'
+import { ConsumeViewRdsOracleAws } from './ConsumeViewRdsOracleAws'
 
 export const ConsumeViewCategorySelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState("iec2")
@@ -20,6 +21,7 @@ export const ConsumeViewCategorySelectionAws = () => {
         { value: "irdsmysql", label: "Instancias RDS Mysql", icon: <Database className="mr-2 h-5 w-5" /> },
         // { value: "irdsmariadb", label: "Instancias RDS MariaDB", icon: <Database className="mr-2 h-5 w-5" /> },
         { value: "irdssqlserver", label: "Instancias RDS SQL Server", icon: <Database className="mr-2 h-5 w-5" /> },
+        { value: "irdsoracle", label: "Instancias RDS Oracle", icon: <Database className="mr-2 h-5 w-5" /> },
         // { value: "eksnodes", label: "Nodos EKS", icon: <Computer className="mr-2 h-5 w-5" /> },
     ]
 
@@ -37,6 +39,8 @@ export const ConsumeViewCategorySelectionAws = () => {
                 return <ConsumeViewRdsMysqlAws />
             case "irdsmariadb":
                 return <ConsumeViewRdsMariadbAws />
+            case "irdsoracle":
+                return <ConsumeViewRdsOracleAws />
             case "irdssqlserver":
                 return <ConsumeViewRdsSqlServerAws />
             default:

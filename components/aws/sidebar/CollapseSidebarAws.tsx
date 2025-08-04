@@ -161,6 +161,12 @@ export const CollapseSidebarAWS = () => {
           icon: Database,
           href: '/aws/recursos/instancias-rds-sqlserver',
           color: 'text-orange-600',
+        },
+        {
+          label: 'Instancias RDS Oracle',
+          icon: Database,
+          href: '/aws/recursos/instancias-rds-oracle',
+          color: 'text-orange-600',
         }
         // {
         //   label: 'Instancias RDS MariaDB',
