@@ -21,6 +21,7 @@ import {
   // Layers,
   Computer,
   Database,
+  Pyramid
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -174,6 +175,13 @@ export const CollapseSidebarAWS = () => {
         //   color: 'text-orange-700',
         // },
       ],
+    },
+    {
+      label: 'Vista Asesor',
+      icon: Pyramid,
+      href: '/aws/advisor',
+      tooltip: 'Vista Asesor',
+      color: 'text-[#3258de]',
     }
   ]
 
