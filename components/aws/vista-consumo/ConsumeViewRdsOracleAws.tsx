@@ -1,9 +1,7 @@
-'use client'
-
-import { ChartColumnBig, Info } from 'lucide-react'
+import { Database, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const FunctionViewUsageByLocationEc2Aws = () => {
+export const ConsumeViewRdsOracleAws = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
 
@@ -14,7 +12,6 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
 
         return () => clearTimeout(timer)
     }, [])
-
     return (
         <div className='w-full max-w-full sm:max-w-[95vw] mx-auto px-2 py-3 sm:py-6'>
             <div className='bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden'>
@@ -22,10 +19,10 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ChartColumnBig className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <Database className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Volumen Total de Uso por Localización.
+                                Consumo / No Consumo Instancias RDS Oracle
                             </h2>
                         </div>
                         <button
@@ -36,16 +33,14 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                             <Info className='h-4 w-4 sm:h-5 sm:w-5 text-slate-600' />
                         </button>
                     </div>
-
                     {showInfo && (
                         <div className='mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-100 rounded-lg border border-slate-200 animate-fadeIn'>
                             <p className='text-slate-700 text-xs sm:text-sm leading-relaxed'>
-                                En construcción...
+                                Estas visualizaciones muestran los consumos y no consumos de Instancias RDS Oracle.
                             </p>
                         </div>
                     )}
                 </div>
-
                 <div className='p-2 sm:p-4'>
                     {isLoading ? (
                         <div className='w-full h-[50vh] sm:h-[60vh] md:h-[80vh] flex items-center justify-center bg-slate-50 rounded-lg border border-slate-200 animate-pulse'>
@@ -62,8 +57,8 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="UC_Christus_CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=f56c9b712fe36c91b748"
+                                className='w-full h-[150vh] sm:h-[160vh] md:h-[220vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
@@ -72,8 +67,8 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=20d1d696a3ecf2bb911b"
+                                className='w-full h-[190vh] sm:h-[200vh] md:h-[260vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
@@ -82,16 +77,15 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     )}
                 </div>
             </div>
-
             <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out forwards;
-        }
-      `}</style>
+                @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fadeIn {
+                animation: fadeIn 0.3s ease-out forwards;
+                }
+            `}</style>
         </div>
     )
 }

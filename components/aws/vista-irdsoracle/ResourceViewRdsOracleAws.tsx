@@ -1,11 +1,11 @@
 'use client'
 
-import { ChartColumnBig, Info } from 'lucide-react'
+import { Database, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-export const FunctionViewUsageByLocationEc2Aws = () => {
-    const [isLoading, setIsLoading] = useState(true)
-    const [showInfo, setShowInfo] = useState(false)
+export const ResourceViewRdsOracleAws = () => {
+    const [showInfo, setShowInfo] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -14,7 +14,6 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
 
         return () => clearTimeout(timer)
     }, [])
-
     return (
         <div className='w-full max-w-full sm:max-w-[95vw] mx-auto px-2 py-3 sm:py-6'>
             <div className='bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden'>
@@ -22,10 +21,10 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0'>
                         <div className='flex items-center gap-2 sm:gap-3'>
                             <div className='bg-slate-800 p-1.5 sm:p-2 rounded-lg'>
-                                <ChartColumnBig className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
+                                <Database className='h-5 w-5 sm:h-6 sm:w-6 text-white' />
                             </div>
                             <h2 className='text-slate-800 text-xl sm:text-2xl font-bold'>
-                                Volumen Total de Uso por Localización.
+                                Vista Instancias RDS Oracle
                             </h2>
                         </div>
                         <button
@@ -62,36 +61,37 @@ export const FunctionViewUsageByLocationEc2Aws = () => {
                                 title="UC_Christus_CloudPerformance-AWS"
                                 width='1280'
                                 height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMzYzZWQxZTgtNDBlNy00MWJhLTgxMjctZGVjYzEyYWRjN2YxIiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=180c6f79251390eabdf8"
+                                className='w-full h-[330vh] sm:h-[340vh] md:h-[400vh]'
                                 style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
                                 frameBorder='0'
                                 allowFullScreen={true}
                             />
                             {/* <iframe
                                 title="CloudPerformance-AWS"
-                                width='1280'
-                                height='720'
-                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=4dea190a6aee3a72b0c4"
-                                className='w-full h-[70vh] sm:h-[80vh] md:h-[140vh]'
-                                style={{ clipPath: 'inset(0px 0px 53px 0px)' }}
-                                frameBorder='0'
+                                width="1280"
+                                height="2100"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNmY5NmNmZWUtNWE1ZS00MDMxLWE0ZjQtYmEwZGM1NDk3ZTY5IiwidCI6IjdiYjNlMTQ3LWQxZTgtNDQ4Yy05NGE0LTUyNjQyZGQ1ZGQ4ZCIsImMiOjR9&pageName=0ef6eab2887c4c888d41"
+                                className='w-full h-[330vh] sm:h-[340vh] md:h-[400vh]'
+                                style={{ clipPath: "inset(0px 0px 53px 0px)" }}
+                                frameBorder="0"
                                 allowFullScreen={true}
                             /> */}
                         </div>
+
                     )}
                 </div>
             </div>
 
             <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out forwards;
-        }
-      `}</style>
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+          }
+        `}</style>
         </div>
     )
 }

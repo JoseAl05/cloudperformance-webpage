@@ -8,6 +8,7 @@ import { FunctionViewUsageRdsSqlServerOpenClosedHoursAws } from './FunctionViewU
 import { FunctionViewUsageRdsMariaDbOpenClosedHoursAws } from './FunctionViewUsageRdsMariaDbOpenClosedHoursAws';
 import { FunctionViewUsageEc2AsgOpenClosedHoursAws } from './FunctionViewUsageEc2AsgOpenClosedHoursAws';
 import { FunctionViewUsageEc2EksOpenClosedHoursAws } from './FunctionViewUsageEc2EksOpenClosedHoursAws';
+import { FunctionViewUsageRdsOracleOpenClosedHoursAws } from './FunctionViewUsageRdsOracleOpenClosedHoursAws';
 
 export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
     const [selectedCategory, setSelectedCategory] = useState('iec2');
@@ -18,6 +19,7 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
         { value: 'irdspg', label: 'Instancias RDS PostgreSQL', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdsmysql', label: 'Instancias RDS Mysql', icon: <Database className='mr-2 h-5 w-5' /> },
         { value: 'irdssqlserver', label: 'Instancias RDS Sql Server', icon: <Database className='mr-2 h-5 w-5' /> },
+        { value: 'irdsoracle', label: 'Instancias RDS Oracle', icon: <Database className='mr-2 h-5 w-5' /> },
         // { value: 'irdsmariadb', label: 'Instancias RDS MariaDB', icon: <Database className='mr-2 h-5 w-5' /> },
     ];
 
@@ -35,6 +37,8 @@ export const FunctionViewUsageOpenClosedHoursSelectionAws = () => {
                 return <FunctionViewUsageRdsMysqlOpenClosedHoursAws />
             case 'irdssqlserver':
                 return <FunctionViewUsageRdsSqlServerOpenClosedHoursAws />
+            case 'irdsoracle':
+                return <FunctionViewUsageRdsOracleOpenClosedHoursAws />
             case 'irdsmariadb':
                 return <FunctionViewUsageRdsMariaDbOpenClosedHoursAws />
             default:
