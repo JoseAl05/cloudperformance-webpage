@@ -1,5 +1,5 @@
 'use client'
-import { DollarSignIcon, Info, Pyramid } from 'lucide-react'
+import { DollarSignIcon, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export const SavingPlanViewComponentAzure = () => {
