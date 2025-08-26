@@ -18,7 +18,8 @@ import {
   // HardDrive,
   Grid2X2,
   Table2,
-  Pyramid
+  Pyramid,
+  DollarSignIcon
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -160,6 +161,13 @@ export const CollapseSidebarAzure = () => {
       icon: Pyramid,
       href: '/azure/advisor',
       tooltip: 'Vista Asesor',
+      color: 'text-[#3258de]',
+    },
+    {
+      label: 'Vista Saving Plan',
+      icon: DollarSignIcon,
+      href: '/azure/savingplan',
+      tooltip: 'Vista Saving Plan',
       color: 'text-[#3258de]',
     }
   ]

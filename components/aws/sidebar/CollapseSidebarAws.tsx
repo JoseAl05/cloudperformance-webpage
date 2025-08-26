@@ -21,7 +21,8 @@ import {
   // Layers,
   Computer,
   Database,
-  Pyramid
+  Pyramid,
+  DollarSignIcon
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -187,6 +188,13 @@ export const CollapseSidebarAWS = () => {
       icon: Pyramid,
       href: '/aws/advisor',
       tooltip: 'Vista Asesor',
+      color: 'text-[#3258de]',
+    },
+    {
+      label: 'Vista Saving Plan',
+      icon: DollarSignIcon,
+      href: '/aws/savingplan',
+      tooltip: 'Vista Saving Plan',
       color: 'text-[#3258de]',
     }
   ]
